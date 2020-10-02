@@ -1,0 +1,36 @@
+"r","3","/usr/bin/python2.7 /Users/nikhilkalyan/CodeSignals-Practice/matrixsumm.py",,"PythonRunner",,"1601593071046","unmarked.txt"
+"o","3",,"
+Process finished with exit code 0
+",,"system","1601593071264",
+"r","4","/usr/bin/python2.7 /Users/nikhilkalyan/CodeSignals-Practice/matrixsumm.py",,"PythonRunner",,"1601593077921","unmarked.txt"
+"o","4",,"
+Process finished with exit code 0
+",,"system","1601593078072",
+"r","5","/usr/bin/python2.7 /Users/nikhilkalyan/CodeSignals-Practice/matrixsumm.py",,"PythonRunner",,"1601595017761","unmarked.txt"
+"o","5",,"
+Process finished with exit code 0
+",,"system","1601595018044",
+"r","14","""/Users/nikhilkalyan/PycharmProjects/SSW 810/venv/bin/python"" /Users/nikhilkalyan/CodeSignals-Practice/",,"PythonRunner",,"1601595412442","unmarked.txt"
+"o","14",,"/Users/nikhilkalyan/PycharmProjects/SSW 810/venv/bin/python: can't find '__main__' module in '/Users/nikhilkalyan/CodeSignals-Practice/'
+",,"stderr","1601595412823",
+"o","14",,"
+Process finished with exit code 1
+",,"system","1601595412865",
+"r","15","""/Users/nikhilkalyan/PycharmProjects/SSW 810/venv/bin/python"" /Users/nikhilkalyan/CodeSignals-Practice/",,"PythonRunner",,"1601595417049","unmarked.txt"
+"o","15",,"/Users/nikhilkalyan/PycharmProjects/SSW 810/venv/bin/python: can't find '__main__' module in '/Users/nikhilkalyan/CodeSignals-Practice/'
+",,"stderr","1601595417411",
+"o","15",,"
+Process finished with exit code 1
+",,"system","1601595417462",
+"r","16","""/Users/nikhilkalyan/PycharmProjects/SSW 810/venv/bin/python"" /Users/nikhilkalyan/CodeSignals-Practice/",,"PythonRunner",,"1601595418922","unmarked.txt"
+"o","16",,"/Users/nikhilkalyan/PycharmProjects/SSW 810/venv/bin/python: can't find '__main__' module in '/Users/nikhilkalyan/CodeSignals-Practice/'
+",,"stderr","1601595419282",
+"o","16",,"
+Process finished with exit code 1
+",,"system","1601595419326",
+"r","17","""/Users/nikhilkalyan/PycharmProjects/SSW 810/venv/bin/python"" /Users/nikhilkalyan/CodeSignals-Practice/*",,"PythonRunner",,"1601595434378","unmarked.txt"
+"o","17",,"/Users/nikhilkalyan/PycharmProjects/SSW 810/venv/bin/python: can't open file '/Users/nikhilkalyan/CodeSignals-Practice/*': [Errno 2] No such file or directory
+",,"stderr","1601595434753",
+"o","17",,"
+Process finished with exit code 2
+",,"system","1601595434794",

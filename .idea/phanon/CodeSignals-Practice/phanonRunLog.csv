@@ -1,0 +1,152 @@
+"r","6","/usr/bin/python2.7 /Users/nikhilkalyan/CodeSignals-Practice/allLongestString.py",,"PythonRunner",,"1601595043675","allLongestString.py"
+"o","6",,"vcd
+",,"stdout","1601595043899",
+"o","6",,"[]
+",,"stdout","1601595043899",
+"o","6",,"
+Process finished with exit code 0
+",,"system","1601595043904",
+"r","7","/usr/bin/python2.7 /Users/nikhilkalyan/CodeSignals-Practice/allLongestString.py",,"PythonRunner",,"1601595068538","allLongestString.py"
+"o","7",,"Traceback (most recent call last):
+",,"stderr","1601595068685",
+"o","7",,"  File ""/Users/nikhilkalyan/CodeSignals-Practice/allLongestString.py"", line 11, in <module>
+",,"stderr","1601595068685",
+"o","7",,"    print(allLongestStrings([""aba"", ""aa"", ""ad"", ""vcd"", ""aba""]))
+",,"stderr","1601595068685",
+"o","7",,"  File ""/Users/nikhilkalyan/CodeSignals-Practice/allLongestString.py"", line 3, in allLongestStrings
+",,"stderr","1601595068685",
+"o","7",,"    a = max(len(inputArray))
+",,"stderr","1601595068686",
+"o","7",,"TypeError: 'int' object is not iterable
+",,"stderr","1601595068686",
+"o","7",,"
+Process finished with exit code 1
+",,"system","1601595068689",
+"r","8","/usr/bin/python2.7 /Users/nikhilkalyan/CodeSignals-Practice/allLongestString.py",,"PythonRunner",,"1601595098170","allLongestString.py"
+"o","8",,"3
+",,"stdout","1601595098329",
+"o","8",,"['aba', 'vcd', 'aba']
+",,"stdout","1601595098329",
+"o","8",,"
+Process finished with exit code 0
+",,"system","1601595098331",
+"r","9","/usr/bin/python2.7 /Users/nikhilkalyan/CodeSignals-Practice/allLongestString.py",,"PythonRunner",,"1601595148405","allLongestString.py"
+"o","9",,"4
+",,"stdout","1601595148638",
+"o","9",,"['yely']
+",,"stdout","1601595148638",
+"o","9",,"
+Process finished with exit code 0
+",,"system","1601595148644",
+"r","10","/usr/bin/python2.7 /Users/nikhilkalyan/CodeSignals-Practice/allLongestString.py",,"PythonRunner",,"1601595262799","allLongestString.py"
+"o","10",,"varennyky
+",,"stdout","1601595263061",
+"o","10",,"[]
+",,"stdout","1601595263061",
+"o","10",,"
+Process finished with exit code 0
+",,"system","1601595263066",
+"r","11","/usr/bin/python2.7 /Users/nikhilkalyan/CodeSignals-Practice/allLongestString.py",,"PythonRunner",,"1601595268536","allLongestString.py"
+"o","11",,"varennyky
+",,"stdout","1601595268685",
+"o","11",,"[]
+",,"stdout","1601595268685",
+"o","11",,"
+Process finished with exit code 0
+",,"system","1601595268688",
+"r","12","/usr/bin/python2.7 /Users/nikhilkalyan/CodeSignals-Practice/allLongestString.py",,"PythonRunner",,"1601595279545","allLongestString.py"
+"o","12",,"9
+",,"stdout","1601595279690",
+"o","12",,"['varennyky']
+",,"stdout","1601595279690",
+"o","12",,"
+Process finished with exit code 0
+",,"system","1601595279697",
+"r","13","""/Users/nikhilkalyan/PycharmProjects/SSW 810/venv/bin/python"" ""/Users/nikhilkalyan/CodeSignals-Practice/counting unique items.py""",,"PythonRunner",,"1601595359283","counting unique items.py"
+"o","13",,"Traceback (most recent call last):
+",,"stderr","1601595359931",
+"o","13",,"  File ""/Users/nikhilkalyan/CodeSignals-Practice/counting unique items.py"", line 8, in <module>
+",,"stderr","1601595359931",
+"o","13",,"    from pip._vendor.pep517.compat import FileNotFoundError
+",,"stderr","1601595359931",
+"o","13",,"ImportError: cannot import name 'FileNotFoundError' from 'pip._vendor.pep517.compat' (/Users/nikhilkalyan/PycharmProjects/SSW 810/venv/lib/python3.8/site-packages/pip-19.0.3-py3.8.egg/pip/_vendor/pep517/compat.py)
+",,"stderr","1601595359931",
+"o","13",,"
+Process finished with exit code 1
+",,"system","1601595359980",
+"r","18","""/Users/nikhilkalyan/PycharmProjects/SSW 810/venv/bin/python"" /Users/nikhilkalyan/CodeSignals-Practice/allLongestString.py",,"PythonRunner",,"1601595451928","allLongestString.py"
+"o","18",,"9
+",,"stdout","1601595452334",
+"o","18",,"['varennyky']
+",,"stdout","1601595452334",
+"o","18",,"
+Process finished with exit code 0
+",,"system","1601595452370",
+"r","19","""/Users/nikhilkalyan/PycharmProjects/SSW 810/venv/bin/python"" /Applications/PyCharm.app/Contents/plugins/python/helpers/pydev/pydevd.py --multiproc --qt-support=auto --save-threading --save-asyncio --client 127.0.0.1 --port 51151 --file ""/Users/nikhilkalyan/CodeSignals-Practice/counting unique items.py""",,"PyConcurrencyDebugRunner",,"1601595513406","counting unique items.py"
+"o","19",,"pydev debugger: process 3499 is connecting
+",,"stderr","1601595514215",
+"o","19",,"
+",,"stderr","1601595514215",
+"o","19",,"Traceback (most recent call last):
+",,"stderr","1601595514343",
+"o","19",,"  File ""/Applications/PyCharm.app/Contents/plugins/python/helpers/pydev/pydevd.py"", line 1438, in _exec
+",,"stderr","1601595514343",
+"o","19",,"    pydev_imports.execfile(file, globals, locals)  # execute the script
+",,"stderr","1601595514344",
+"o","19",,"  File ""/Applications/PyCharm.app/Contents/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py"", line 18, in execfile
+",,"stderr","1601595514344",
+"o","19",,"    exec(compile(contents+""\n"", file, 'exec'), glob, loc)
+",,"stderr","1601595514344",
+"o","19",,"  File ""/Users/nikhilkalyan/CodeSignals-Practice/counting unique items.py"", line 8, in <module>
+",,"stderr","1601595514344",
+"o","19",,"    from pip._vendor.pep517.compat import FileNotFoundError
+",,"stderr","1601595514344",
+"o","19",,"ImportError: cannot import name 'FileNotFoundError' from 'pip._vendor.pep517.compat' (/Users/nikhilkalyan/PycharmProjects/SSW 810/venv/lib/python3.8/site-packages/pip-19.0.3-py3.8.egg/pip/_vendor/pep517/compat.py)
+",,"stderr","1601595514344",
+"o","19",,"
+Process finished with exit code 130 (interrupted by signal 2: SIGINT)
+",,"system","1601595514721",
+"r","3","""/Users/nikhilkalyan/PycharmProjects/SSW 810/venv/bin/python"" ""/Users/nikhilkalyan/CodeSignals-Practice/counting unique items.py""",,"PythonRunner",,"1601598518467","counting unique items.py"
+"o","3",,"Traceback (most recent call last):
+",,"stderr","1601598520393",
+"o","3",,"  File ""/Users/nikhilkalyan/CodeSignals-Practice/counting unique items.py"", line 8, in <module>
+",,"stderr","1601598520393",
+"o","3",,"    from pip._vendor.pep517.compat import FileNotFoundError
+",,"stderr","1601598520393",
+"o","3",,"ImportError: cannot import name 'FileNotFoundError' from 'pip._vendor.pep517.compat' (/Users/nikhilkalyan/PycharmProjects/SSW 810/venv/lib/python3.8/site-packages/pip-19.0.3-py3.8.egg/pip/_vendor/pep517/compat.py)
+",,"stderr","1601598520393",
+"o","3",,"
+Process finished with exit code 1
+",,"system","1601598520430",
+"r","4","""/Users/nikhilkalyan/PycharmProjects/SSW 810/venv/bin/python"" /Users/nikhilkalyan/CodeSignals-Practice/commonCHarCount.py",,"PythonRunner",,"1601598554550","commonCHarCount.py"
+"o","4",,"8
+",,"stdout","1601598555147",
+"o","4",,"
+Process finished with exit code 0
+",,"system","1601598555190",
+"r","5","""/Users/nikhilkalyan/PycharmProjects/SSW 810/venv/bin/python"" /Users/nikhilkalyan/CodeSignals-Practice/commonCHarCount.py",,"PythonRunner",,"1601598556210","commonCHarCount.py"
+"o","5",,"8
+",,"stdout","1601598556589",
+"o","5",,"
+Process finished with exit code 0
+",,"system","1601598556632",
+"r","6","""/Users/nikhilkalyan/PycharmProjects/SSW 810/venv/bin/python"" /Users/nikhilkalyan/CodeSignals-Practice/commonCHarCount.py",,"PythonRunner",,"1601598592777","commonCHarCount.py"
+"o","6",,"  File ""/Users/nikhilkalyan/CodeSignals-Practice/commonCHarCount.py"", line 8
+",,"stderr","1601598593177",
+"o","6",,"    return cnt
+",,"stderr","1601598593177",
+"o","6",,"    ^
+",,"stderr","1601598593177",
+"o","6",,"IndentationError: expected an indented block
+",,"stderr","1601598593177",
+"o","6",,"
+Process finished with exit code 1
+",,"system","1601598593221",
+"r","7","""/Users/nikhilkalyan/PycharmProjects/SSW 810/venv/bin/python"" /Users/nikhilkalyan/CodeSignals-Practice/commonCHarCount.py",,"PythonRunner",,"1601598607841","commonCHarCount.py"
+"o","7",,"['a', 'a', 'b', 'c', 'c'] ['a', 'a', 'a', 'c', 'd']
+",,"stdout","1601598608266",
+"o","7",,"0
+",,"stdout","1601598608266",
+"o","7",,"
+Process finished with exit code 0
+",,"system","1601598608305",

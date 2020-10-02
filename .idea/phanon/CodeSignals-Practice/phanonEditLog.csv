@@ -1,0 +1,2422 @@
+"a","Move Cursor",,,"1601593200207","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593200296","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593200400","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593200504","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593200604","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593200704","slicing and dicing files.py"
+"a","Comment with Line Comment",,,"1601593206472","slicing and dicing files.py"
+"e","from math import sin, cos, sqrt, atan2, radians
+import requests
+
+""""""Account validation code Akuna Capitals""""""
+
+# inp = input(""enter:"")
+# try:
+#     j = int(inp[:-2].upper(), 16)
+# except:
+#     print(""INVALID"")
+# else:
+#     k = int(inp[-2:].upper(), 16)
+#     summ = 0
+#     for i in str(j):
+#         summ += int(i)
+# 
+#     if str(hex(summ)) == str(hex(k)):
+#         print(""Valid"")
+#     else:
+        print(""Invalid"")
+
+
+""""""Travel Distance code Akuna Capitals""""""
+
+# def travel(a, b, c):
+#     try:
+#         i = a.split(':')
+#         j = b.split("":"")
+#         k = c.split(':')
+#         m = list(k)
+#         lat1, long1 = radians(float(i[2])), radians(float(i[3]))
+#         lat2, long2 = radians(float(j[2])), radians(float(j[3]))
+#     except IndexError and ValueError and TypeError and AttributeError:
+#         print(""Please input proper Values !!"")
+#     else:
+#         r = 6370.0
+# 
+#         dlon = long2 - long1
+#         dlat = lat2 - lat1
+# 
+#         l = sin(dlat / 2) ** 2 + cos(lat1) * cos(lat2) * sin(dlon / 2) ** 2
+#         k = 2 * atan2(sqrt(l), sqrt(1 - l))
+# 
+#         distance = round((r * k) / 1.609344)
+#         m.append(str(distance))
+#         d = "":"".join(m[1:])
+# 
+#         print(d)
+# 
+# 
+# travel({'d': 'u'}, ('LOC:NYC:40.7127:-74.0059'), ['TRIP:COFFEE1C:CHI:NYC'])
+
+
+# def twoSum(nums, target):
+#     h = {}
+#     for i, num in enumerate(nums):
+#         n = target - num
+#         if n not in h:
+#             h[num] = i
+#         
+#         else:
+#             return [h[n], i]
+#         print(h)
+# 
+# print(twoSum([56, 48, 92, 52], 100))
+
+
+# def findTriplets(arr):
+#     lst = []
+#     ss = set()
+#     for i in range(len(arr)-1):
+#         s = set()
+#         
+#         for j in range(i+1, len(arr)):
+#             x = -(arr[i]+arr[j])
+#             if x in s:
+#                 lst.append([x, arr[i], arr[j]])
+#             else:
+#                 s.add(arr[j])
+#     seen = set()
+#     a = [x for x in lst if frozenset(x) not in seen and not seen.add(frozenset(x))]
+#     return a
+# print(findTriplets([0, -1, 2, -3, 1]))
+
+# def threeSumClosest(nums, target):
+#     nums.sort()
+#     diff = float('inf')
+#     for i in range(len(nums)):
+#         l, h = i + 1, len(nums) - 1
+#         while l < h:
+#             sum = nums[i] + nums[l] + nums[h]
+#             if abs(target - sum) < abs(diff):
+#                 diff = target - sum
+#             if sum < target:
+#                 l += 1
+#             else:
+#                 h -= 1
+#         if diff == 0:
+#             break
+#     return target - diff
+# print(threeSumClosest([-1, 2, 1, -4], 1))
+
+
+from collections import Counter
+
+# def relativeSortArray(self, arr1: List[int], arr2: List[int]) -> List[int]:
+#     if not arr1:
+#         return []
+#     elif not arr2:
+#         return sorted(arr1)
+#     cnt1 = collections.Counter(arr1)
+#     ret = []
+# 
+#     for key in arr2:
+#         ret += ([key] * cnt1[key])
+#         del cnt1[key]
+# 
+#     cnt1_list = sorted(cnt1.items())
+#     for num, i in cnt1_list:
+#         ret += ([num] * i)
+# 
+#     return ret
+
+# def flipAndInvertImage(A):
+#     ls = []
+#     for i in A:
+#         i = i[::-1]
+#         ls.append(i)
+#     for i in range(len(ls)):
+#         for j in range(len(ls)):
+#             if ls[i][j] == 0:
+#                 ls[i][j] = 1
+#             else:
+#                 ls[i][j] = 0
+#             j += 1
+#         i += 1
+#     return ls
+# 
+# print(flipAndInvertImage([[1,1,0],[1,0,1],[0,0,0]]))
+
+# root1 = [3, 5, 1, 6, 2, 9, 8, null, null, 7, 4]
+# root2 = [3, 5, 1, 6, 7, 4, 2, null, null, null, null, null, null, 9, 8]
+# 
+# class Solution:
+#     def leafSimilar(self, root1: TreeNode, root2: TreeNode) -> bool:
+#         self.lis1,self.lis2 = [],[]
+# 
+#         if not root1 and not root2:
+#             return 1
+#         if not root1 and root2 or (not root2 and root1):
+#             return 0
+# 
+#         def helper1(root):
+#             if not root:
+#                 return
+# 
+#             if not root.left and not root.right:
+#                 self.lis1.append(root.val)
+# 
+# 
+#             if root.left:
+#                 helper1(root.left)
+#             helper1(root.right)
+#         def helper2(root):
+#             if not root:
+#                 return
+# 
+#             if not root.left and not root.right:
+#                 self.lis2.append(root.val)
+# 
+# 
+#             if root.left:
+#                 helper2(root.left)
+#             helper2(root.right)
+# 
+#         helper1(root1)
+#         helper2(root2)
+# 
+#         return self.lis1==self.lis2
+
+# result = []
+# 
+# 
+# def isPalindrome(st):  # checking of string if it is palindrome or not
+#     if st == st[::-1]:
+#         return True
+#     return False
+# 
+# 
+# def palindromePartition(temp, string):
+#     if len(string) is 0:  # base case
+#         result.append(temp)  # appending the partitioned palindromes
+#         return
+# 
+#     for i in range(1, len(string) + 1):
+#         if isPalindrome(string[:i]):
+#             palindromePartition(temp + [string[:i]], string[i:])
+# 
+# 
+# palindromePartition([], 'aab')
+# print(result)
+
+# def minCostToMoveChips(self, position: List[int]) -> int:
+#     odd = 0
+#     even = 0
+#     for p in position:
+#         if p % 2 == 0:
+#             even += 1
+#         else:
+#             odd += 1
+#     if even > odd:
+#         return odd
+#     return even
+
+# def maxProfit(prices, fee: int) -> int:
+#     cash, hold = 0, -prices[0]
+#     for i in range(1, len(prices)):
+#         cash = max(cash, hold + prices[i] - fee)
+#         hold = max(hold, cash - prices[i])
+#     return cash
+# 
+# print(maxProfit([1,3,2,8,4,9, 9, 5, 7, 9, 3, 65, 89, 9000, 5000], 2))
+
+# url = ""https://jsonmock.hackerrank.com/api/articles?/author=""
+# 
+# 
+# def getArticleTitles(author):
+#     # Write your code here
+#     headers = {
+#         'author': author
+#     }
+#     r = requests.get(url, headers=headers)
+# 
+#     soup = Beautifulsoup(r.text, 'html.parser')
+#     l = soup.find('ul', {""class"": 'title'})
+# 
+#     for i in l.findAll('title'):
+#         print(i.text)
+# 
+# 
+# getArticleTitles('epage')
+
+
+# import json
+# 
+# 
+# # Implement the class below, keeping the constructor's signature unchanged; it should take no arguments.
+# 
+# class MarkingPositionMonitor:
+#     dict_for_inst = {}
+# 
+#     def __init__(self):
+#         pass
+# 
+#     '''
+#         dict_for_inst = {
+#             ""symbol"" : {
+#                 position : 0, 
+#                 orders: {
+#                 ""order_id"" : [messages],
+#                 ""order_id"" : [messages],
+#                 ""order_id"" : [messages]
+#                 }
+#             }
+#         }
+# 
+# 
+#         message = {
+#             ""type"": ""NEW"",
+#             ""symbol"": ""MSFT"",
+#             ""order_id"": 5,
+#             ""side"": ""SELL"",
+#             ""quantity"": 1100,
+#             ""time"": ""2016-12-22T12:07:04.521073""
+#         }
+# 
+#         from the question
+#         {
+#             ""type"": ""NEW"",
+#             ""symbol"": ""MSFT"",
+#             ""order_id"": 5,
+#             ""side"": ""SELL"",
+#             ""quantity"": 1100,
+#             ""time"": ""2016-12-22T12:07:04.521073""
+#         }
+# 
+#         AAPL, IBM, MSFT
+# 
+# 
+#         NEW, 				out
+#         ORDER_ACK,
+#         ORDER_REJECT
+#         CANCEL, 			out
+#         CANCEL_ACK,
+#         CANCEL_REJECT,
+#         FILL
+# 
+# 
+#         buying - getting
+#         selling - giving 
+#         position - shares of instumenet I own
+#         flat - long - short
+# 
+#         return marking position		
+#     '''
+# 
+#     def on_event(self, message):
+#         message = json.loads(message)
+#         typ = message[""type""]
+#         oid = str(message[""order_id""])
+# 
+#         if typ == ""NEW"":
+#             sym = message[""symbol""]
+#             if sym not in self.dict_for_inst:
+#                 self.dict_for_inst[sym] = [0, {}]  # position, message list
+#             syd = message[""side""]
+#             qty = message[""quantity""]
+#             if syd == ""SELL"":
+#                 self.dict_for_inst[sym][0] -= qty
+#                 if len(self.dict_for_inst[sym][1][oid]) == 0:
+#                     self.dict_for_inst[sym][1][oid] = [message]
+#                 else:
+#                     self.dict_for_inst[sym][1][oid].append(message)
+#             if syd == ""BUY"":
+#                 if len(self.dict_for_inst[sym][1][oid]) == 0:
+#                     self.dict_for_inst[sym][1][oid] = [message]
+#                 else:
+#                     self.dict_for_inst[sym][1][oid].append(message)
+# 
+#         if typ == ""ORDER_ACK"":
+#             pass
+#             # self.dict_for_inst[sym][1][oid].append(message)
+# 
+#         if typ == ""ORDER_REJECT"":
+#             if self.dict_for_inst[sym][1][oid][-1][""side""] == ""SELL"" and self.dict_for_inst[sym][1][oid][-1][
+#                 ""order_id""] == oid:
+#                 self.dict_for_inst[sym][0] += self.dict_for_inst[sym][1][oid].pop()[""quantity""]
+#                 del (self.dict_for_inst[sym][1][oid])
+#             if self.dict_for_inst[sym][1][oid][-1][""side""] == ""BUY"":
+#                 del (self.dict_for_inst[sym][1][oid])
+# 
+#         if typ == ""CANCEL"":
+#             self.dict_for_inst[sym][1][oid].append(message)
+# 
+#         if typ == ""CANCEL_ACK"":
+#             if self.dict_for_inst[sym][1][oid][-1][
+#                 ""type""] == ""CANCEL"":  # and any[x[""type""] == ""NEW"" for x in self.dict_for_inst[sym][1][oid]]:
+#                 self.dict_for_inst[sym][0] += self.dict_for_inst[sym][1][oid].pop()[""quantity""]
+#                 del (self.dict_for_inst[sym][1][oid])
+# 
+#         '''
+#                 dict_for_inst = {
+#                     ""symbol"" : [
+#                         position, {
+#                         ""order_id"" : [messages],
+#                         ""order_id"" : [messages],
+#                         ""order_id"" : [messages]
+#                         }
+#                     ]
+#                 }
+#                 message = {
+#                     ""type"": ""NEW"",
+#                     ""symbol"": ""MSFT"",
+#                     ""order_id"": 5,
+#                     ""side"": ""SELL"",
+#                     ""quantity"": 1100,
+#                     ""time"": ""2016-12-22T12:07:04.521073""
+#                 }
+#         '''
+# 
+#         if typ == ""FILL"":
+#             for y in range(len(self.dict_for_inst)):
+#                 for x in self.dict_for_inst[sym][1]:
+#                     if self.dict_for_inst[sym][1][x][-1][""side""] == ""BUY"":
+#                         self.dict_for_inst[sym][0] += int(self.dict_for_inst[sym][1][x][-1][""quantity""])
+#         return self.dict_for_inst[sym][0]
+# 
+# 
+# a = MarkingPositionMonitor()
+# m = """"""{""type"": ""NEW"", ""symbol"": ""AAPL"", ""order_id"": 1, ""side"": ""BUY"", ""quantity"": 1700, 
+# ""time"": ""2017-03-15T10:15:20.178562""} """"""
+# a.on_event(m)
+# 
+# def airportGates2(arr, dep):
+#     dep = sorted(dep)
+#     currentPlanes = 1
+#     currentDeparturePosition = 0
+#     maxArrival = 1
+# 
+#     for i in range(len(arr)):
+#         arrTime = arr[i]
+#         maxArrival = max(maxArrival, currentPlanes)
+#         currentPlanes += 1
+# 
+#         for j in range(currentDeparturePosition, len(dep)):
+#             if dep[j] < arrTime:
+#                 currentDeparturePosition = j
+#                 currentPlanes -= 1
+#             else:
+#                 break
+# 
+#     return maxArrival
+# 
+# print(airportGates2([630, 645, 730, 1100], [700, 845, 1015, 1130]))
+
+# def roman_number(number):
+#     roman_char = {1000: 'M', 900: 'CM', 500: 'D', 400: 'CD', 100: 'C', 90: 'XC', 50: 'L', 40: 'XL', 10: 'X', 9: 'IX',
+#                   5: 'V', 4: 'IV', 1: 'I'}
+#     out = ''
+#     for val, c in roman_char.items():
+#         if number & val:
+#             continue
+#         repeat, number = divmod(number, val)
+#         out += repeat * c
+#     return out
+
+# def almostIncreasingSequence(sequence):
+#     c0,c1=1,1
+#     n=len(sequence)
+#     l1=[]
+#     l2=[]
+#     for i in sequence:
+#         l1.append(i)
+#         l2.append(i)
+#     for i in range(1,n):
+#         if sequence[i-1]>=sequence[i]:
+#             del l1[i]
+#             del l2[i-1]
+#             break
+#     for i in range(1,n-1):
+#         if l1[i-1]>=l1[i]:
+#             c0=0
+#             break
+#     for i in range(1,n-1):
+#         if l2[i-1]>=l2[i]:
+#             c1=0
+#             break
+#     return bool(c0 or c1)
+# 
+# print(almostIncreasingSequence([1, 3, 2, 1]))
+
+
+import collections
+
+# Throttling gateway sol'n @Citadel
+
+def droppedRequests(requestTime):
+    if len(requestTime) <= 3: return 0
+    count = collections.Counter(requestTime)
+    lookup = collections.defaultdict(int)
+    for i in range(requestTime[0], requestTime[-1] + 1):
+        lookup[i] = lookup[i - 1] + count[i]
+    for i in range(3, len(requestTime)):
+        temp1, temp2 = 0, 0
+        if requestTime[i] - 10 in lookup: temp1 = lookup[requestTime[i] - 10]
+        if requestTime[i] - 60 in lookup: temp2 = lookup[requestTime[i] - 60]
+        if requestTime[i - 3] == requestTime[i]:
+            requestTime[i - 3] = '$'
+        elif i + 1 - temp1 > 20:
+            requestTime[i] = '$'
+        elif i + 1 - temp2 > 60:
+            requestTime[i] = '$'
+    return requestTime.count('$')
+","","0","1601593206507","slicing and dicing files.py"
+"e","","# ","386","1601593206514","slicing and dicing files.py"
+"e","","# ","361","1601593206520","slicing and dicing files.py"
+"e","","# ","321","1601593206525","slicing and dicing files.py"
+"e","","# ","318","1601593206530","slicing and dicing files.py"
+"e","","# ","293","1601593206538","slicing and dicing files.py"
+"e","","# ","270","1601593206543","slicing and dicing files.py"
+"e","","# ","255","1601593206549","slicing and dicing files.py"
+"e","","# ","219","1601593206554","slicing and dicing files.py"
+"e","","# ","211","1601593206558","slicing and dicing files.py"
+"e","","# ","188","1601593206562","slicing and dicing files.py"
+"e","","# ","178","1601593206566","slicing and dicing files.py"
+"e","","# ","142","1601593206570","slicing and dicing files.py"
+"e","","# ","135","1601593206576","slicing and dicing files.py"
+"e","","# ","111","1601593206580","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593214695","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593214797","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593214901","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593215007","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593215109","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593217092","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593217195","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593217300","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593217401","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593217510","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593217603","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593217708","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593217810","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593217910","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593218012","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593218112","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593218217","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593218319","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593218421","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593218523","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593218626","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593218731","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593218836","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593218939","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593219036","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593219137","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593219240","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593219340","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593219441","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593219541","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593219644","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593219746","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593219848","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593219964","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593220052","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593220156","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593220256","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593220362","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593220462","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593220564","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593220669","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593220766","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593220868","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593220969","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593221068","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593221170","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593221272","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593221373","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593221473","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593221575","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593221678","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593221779","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593221884","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593221988","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593222090","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593222192","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593222295","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593222394","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593222496","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593222600","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593222703","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593222803","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593222906","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593223008","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593223107","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593223209","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593223312","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593223414","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593223517","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593223618","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593223718","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593223821","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593223925","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593224029","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593224134","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593224234","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593224340","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593224439","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593224542","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593224645","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593224743","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593224843","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593224946","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593225049","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593225148","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593225252","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593225356","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593225459","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593226372","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593226473","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593226573","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593226675","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593226779","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593226884","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593226989","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593227093","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593227194","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593227911","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593228017","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593228118","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593228218","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593228322","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593228423","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593228524","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593228819","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593228920","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593229022","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593229126","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593229230","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593229331","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593229432","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593229535","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593229638","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593229740","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593229844","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593229950","slicing and dicing files.py"
+"a","Comment with Line Comment",,,"1601593253864","slicing and dicing files.py"
+"a","Comment with Line Comment",,,"1601593258905","slicing and dicing files.py"
+"a","Comment with Line Comment",,,"1601593259835","slicing and dicing files.py"
+"a","Comment with Line Comment",,,"1601593260725","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593267222","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593267324","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593267424","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593267524","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593267625","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593267729","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593267832","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593267931","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593268034","slicing and dicing files.py"
+"a","Comment with Line Comment",,,"1601593271684","slicing and dicing files.py"
+"e","","# ","12236","1601593271691","slicing and dicing files.py"
+"e","","# ","12233","1601593271696","slicing and dicing files.py"
+"e","","# ","12205","1601593271700","slicing and dicing files.py"
+"e","","# ","12185","1601593271704","slicing and dicing files.py"
+"e","","# ","12166","1601593271708","slicing and dicing files.py"
+"e","","# ","12137","1601593271712","slicing and dicing files.py"
+"e","","# ","12108","1601593271716","slicing and dicing files.py"
+"e","","# ","12088","1601593271719","slicing and dicing files.py"
+"e","","# ","12069","1601593271723","slicing and dicing files.py"
+"e","","# ","12040","1601593271727","slicing and dicing files.py"
+"e","","# ","12011","1601593271730","slicing and dicing files.py"
+"e","","# ","11991","1601593271734","slicing and dicing files.py"
+"e","","# ","11965","1601593271738","slicing and dicing files.py"
+"e","","# ","11941","1601593271742","slicing and dicing files.py"
+"e","","# ","11900","1601593271747","slicing and dicing files.py"
+"e","","# ","11873","1601593271751","slicing and dicing files.py"
+"e","","# ","11850","1601593271755","slicing and dicing files.py"
+"e","","# ","11827","1601593271758","slicing and dicing files.py"
+"e","","# ","11802","1601593271762","slicing and dicing files.py"
+"e","","# ","11790","1601593271765","slicing and dicing files.py"
+"e","","# ","11778","1601593271768","slicing and dicing files.py"
+"e","","# ","11756","1601593271771","slicing and dicing files.py"
+"e","","# ","11740","1601593271775","slicing and dicing files.py"
+"e","","# ","11698","1601593271778","slicing and dicing files.py"
+"e","","# ","11680","1601593271781","slicing and dicing files.py"
+"e","","# ","11652","1601593271785","slicing and dicing files.py"
+"e","","# ","11605","1601593271789","slicing and dicing files.py"
+"e","","# ","11582","1601593271793","slicing and dicing files.py"
+"e","","# ","11555","1601593271797","slicing and dicing files.py"
+"e","","# ","11515","1601593271800","slicing and dicing files.py"
+"e","","# ","11500","1601593271803","slicing and dicing files.py"
+"e","","# ","11455","1601593271807","slicing and dicing files.py"
+"e","","# ","11335","1601593271810","slicing and dicing files.py"
+"e","","# ","11307","1601593271814","slicing and dicing files.py"
+"e","","# ","11236","1601593271817","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593274603","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593274709","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593274811","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593274912","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593275014","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593275115","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593275220","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593275324","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593275427","slicing and dicing files.py"
+"a","Comment with Line Comment",,,"1601593277579","slicing and dicing files.py"
+"e","","# ","11233","1601593277585","slicing and dicing files.py"
+"e","","# ","11209","1601593277591","slicing and dicing files.py"
+"e","","# ","11206","1601593277596","slicing and dicing files.py"
+"e","","# ","11182","1601593277601","slicing and dicing files.py"
+"e","","# ","11162","1601593277605","slicing and dicing files.py"
+"e","","# ","11125","1601593277610","slicing and dicing files.py"
+"e","","# ","11078","1601593277614","slicing and dicing files.py"
+"e","","# ","11043","1601593277618","slicing and dicing files.py"
+"e","","# ","10981","1601593277622","slicing and dicing files.py"
+"e","","# ","10978","1601593277625","slicing and dicing files.py"
+"e","","# ","10949","1601593277629","slicing and dicing files.py"
+"e","","# ","10895","1601593277633","slicing and dicing files.py"
+"e","","# ","10868","1601593277637","slicing and dicing files.py"
+"e","","# ","10836","1601593277641","slicing and dicing files.py"
+"e","","# ","10833","1601593277645","slicing and dicing files.py"
+"e","","# ","10812","1601593277649","slicing and dicing files.py"
+"e","","# ","10777","1601593277653","slicing and dicing files.py"
+"e","","# ","10753","1601593277657","slicing and dicing files.py"
+"e","","# ","10729","1601593277661","slicing and dicing files.py"
+"e","","# ","10698","1601593277664","slicing and dicing files.py"
+"e","","# ","10695","1601593277668","slicing and dicing files.py"
+"e","","# ","10679","1601593277672","slicing and dicing files.py"
+"e","","# ","10635","1601593277676","slicing and dicing files.py"
+"e","","# ","10543","1601593277681","slicing and dicing files.py"
+"e","","# ","10512","1601593277685","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593281612","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593281715","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593281815","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593281917","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593282020","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593282124","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593282222","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593282323","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593282424","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593282528","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593282636","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593282732","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593282834","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593282937","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593283041","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593283147","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593283243","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593283348","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593283453","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593283550","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593283654","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593283758","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593283860","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593283970","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593284066","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593284170","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593284269","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593284369","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593284474","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593284573","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593284674","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593284777","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593284880","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593284981","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593285082","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593285182","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593285285","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593285386","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593285487","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593285591","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593285695","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593285795","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593285897","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593285998","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593286103","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593286208","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593286312","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593286412","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593286513","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593286613","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593286714","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593286821","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593286919","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593287020","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593287124","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593287226","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593287324","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593287425","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593287530","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593287632","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593287736","slicing and dicing files.py"
+"a","Delete Line",,,"1601593291239","slicing and dicing files.py"
+"e","","# 
+#     def on_event(self, message):
+#         message = json.loads(message)
+#         typ = message[""type""]
+#         oid = str(message[""order_id""])
+# 
+#         if typ == ""NEW"":
+#             sym = message[""symbol""]
+#             if sym not in self.dict_for_inst:
+#                 self.dict_for_inst[sym] = [0, {}]  # position, message list
+#             syd = message[""side""]
+#             qty = message[""quantity""]
+#             if syd == ""SELL"":
+#                 self.dict_for_inst[sym][0] -= qty
+#                 if len(self.dict_for_inst[sym][1][oid]) == 0:
+#                     self.dict_for_inst[sym][1][oid] = [message]
+#                 else:
+#                     self.dict_for_inst[sym][1][oid].append(message)
+#             if syd == ""BUY"":
+#                 if len(self.dict_for_inst[sym][1][oid]) == 0:
+#                     self.dict_for_inst[sym][1][oid] = [message]
+#                 else:
+#                     self.dict_for_inst[sym][1][oid].append(message)
+# 
+#         if typ == ""ORDER_ACK"":
+#             pass
+#             # self.dict_for_inst[sym][1][oid].append(message)
+# 
+#         if typ == ""ORDER_REJECT"":
+#             if self.dict_for_inst[sym][1][oid][-1][""side""] == ""SELL"" and self.dict_for_inst[sym][1][oid][-1][
+#                 ""order_id""] == oid:
+#                 self.dict_for_inst[sym][0] += self.dict_for_inst[sym][1][oid].pop()[""quantity""]
+#                 del (self.dict_for_inst[sym][1][oid])
+#             if self.dict_for_inst[sym][1][oid][-1][""side""] == ""BUY"":
+#                 del (self.dict_for_inst[sym][1][oid])
+# 
+#         if typ == ""CANCEL"":
+#             self.dict_for_inst[sym][1][oid].append(message)
+# 
+#         if typ == ""CANCEL_ACK"":
+#             if self.dict_for_inst[sym][1][oid][-1][
+#                 ""type""] == ""CANCEL"":  # and any[x[""type""] == ""NEW"" for x in self.dict_for_inst[sym][1][oid]]:
+#                 self.dict_for_inst[sym][0] += self.dict_for_inst[sym][1][oid].pop()[""quantity""]
+#                 del (self.dict_for_inst[sym][1][oid])
+# 
+#         '''
+#                 dict_for_inst = {
+#                     ""symbol"" : [
+#                         position, {
+#                         ""order_id"" : [messages],
+#                         ""order_id"" : [messages],
+#                         ""order_id"" : [messages]
+#                         }
+#                     ]
+#                 }
+#                 message = {
+#                     ""type"": ""NEW"",
+#                     ""symbol"": ""MSFT"",
+#                     ""order_id"": 5,
+#                     ""side"": ""SELL"",
+#                     ""quantity"": 1100,
+#                     ""time"": ""2016-12-22T12:07:04.521073""
+#                 }
+#         '''
+# 
+#         if typ == ""FILL"":
+#             for y in range(len(self.dict_for_inst)):
+#                 for x in self.dict_for_inst[sym][1]:
+#                     if self.dict_for_inst[sym][1][x][-1][""side""] == ""BUY"":
+#                         self.dict_for_inst[sym][0] += int(self.dict_for_inst[sym][1][x][-1][""quantity""])
+#         return self.dict_for_inst[sym][0]
+# 
+# 
+","7447","1601593291251","slicing and dicing files.py"
+"a","Undo Delete Line",,,"1601593293715","slicing and dicing files.py"
+"e","# 
+#     def on_event(self, message):
+#         message = json.loads(message)
+#         typ = message[""type""]
+#         oid = str(message[""order_id""])
+# 
+#         if typ == ""NEW"":
+#             sym = message[""symbol""]
+#             if sym not in self.dict_for_inst:
+#                 self.dict_for_inst[sym] = [0, {}]  # position, message list
+#             syd = message[""side""]
+#             qty = message[""quantity""]
+#             if syd == ""SELL"":
+#                 self.dict_for_inst[sym][0] -= qty
+#                 if len(self.dict_for_inst[sym][1][oid]) == 0:
+#                     self.dict_for_inst[sym][1][oid] = [message]
+#                 else:
+#                     self.dict_for_inst[sym][1][oid].append(message)
+#             if syd == ""BUY"":
+#                 if len(self.dict_for_inst[sym][1][oid]) == 0:
+#                     self.dict_for_inst[sym][1][oid] = [message]
+#                 else:
+#                     self.dict_for_inst[sym][1][oid].append(message)
+# 
+#         if typ == ""ORDER_ACK"":
+#             pass
+#             # self.dict_for_inst[sym][1][oid].append(message)
+# 
+#         if typ == ""ORDER_REJECT"":
+#             if self.dict_for_inst[sym][1][oid][-1][""side""] == ""SELL"" and self.dict_for_inst[sym][1][oid][-1][
+#                 ""order_id""] == oid:
+#                 self.dict_for_inst[sym][0] += self.dict_for_inst[sym][1][oid].pop()[""quantity""]
+#                 del (self.dict_for_inst[sym][1][oid])
+#             if self.dict_for_inst[sym][1][oid][-1][""side""] == ""BUY"":
+#                 del (self.dict_for_inst[sym][1][oid])
+# 
+#         if typ == ""CANCEL"":
+#             self.dict_for_inst[sym][1][oid].append(message)
+# 
+#         if typ == ""CANCEL_ACK"":
+#             if self.dict_for_inst[sym][1][oid][-1][
+#                 ""type""] == ""CANCEL"":  # and any[x[""type""] == ""NEW"" for x in self.dict_for_inst[sym][1][oid]]:
+#                 self.dict_for_inst[sym][0] += self.dict_for_inst[sym][1][oid].pop()[""quantity""]
+#                 del (self.dict_for_inst[sym][1][oid])
+# 
+#         '''
+#                 dict_for_inst = {
+#                     ""symbol"" : [
+#                         position, {
+#                         ""order_id"" : [messages],
+#                         ""order_id"" : [messages],
+#                         ""order_id"" : [messages]
+#                         }
+#                     ]
+#                 }
+#                 message = {
+#                     ""type"": ""NEW"",
+#                     ""symbol"": ""MSFT"",
+#                     ""order_id"": 5,
+#                     ""side"": ""SELL"",
+#                     ""quantity"": 1100,
+#                     ""time"": ""2016-12-22T12:07:04.521073""
+#                 }
+#         '''
+# 
+#         if typ == ""FILL"":
+#             for y in range(len(self.dict_for_inst)):
+#                 for x in self.dict_for_inst[sym][1]:
+#                     if self.dict_for_inst[sym][1][x][-1][""side""] == ""BUY"":
+#                         self.dict_for_inst[sym][0] += int(self.dict_for_inst[sym][1][x][-1][""quantity""])
+#         return self.dict_for_inst[sym][0]
+# 
+# 
+","","7447","1601593293723","slicing and dicing files.py"
+"a","Comment with Line Comment",,,"1601593295122","slicing and dicing files.py"
+"e","","# ","10509","1601593295132","slicing and dicing files.py"
+"e","","# ","10506","1601593295136","slicing and dicing files.py"
+"e","","# ","10462","1601593295140","slicing and dicing files.py"
+"e","","# ","10355","1601593295145","slicing and dicing files.py"
+"e","","# ","10278","1601593295149","slicing and dicing files.py"
+"e","","# ","10223","1601593295153","slicing and dicing files.py"
+"e","","# ","10168","1601593295157","slicing and dicing files.py"
+"e","","# ","10140","1601593295161","slicing and dicing files.py"
+"e","","# ","10137","1601593295165","slicing and dicing files.py"
+"e","","# ","10123","1601593295169","slicing and dicing files.py"
+"e","","# ","10103","1601593295173","slicing and dicing files.py"
+"e","","# ","10044","1601593295176","slicing and dicing files.py"
+"e","","# ","10004","1601593295180","slicing and dicing files.py"
+"e","","# ","9966","1601593295184","slicing and dicing files.py"
+"e","","# ","9929","1601593295187","slicing and dicing files.py"
+"e","","# ","9889","1601593295191","slicing and dicing files.py"
+"e","","# ","9852","1601593295194","slicing and dicing files.py"
+"e","","# ","9822","1601593295198","slicing and dicing files.py"
+"e","","# ","9802","1601593295202","slicing and dicing files.py"
+"e","","# ","9778","1601593295205","slicing and dicing files.py"
+"e","","# ","9750","1601593295209","slicing and dicing files.py"
+"e","","# ","9700","1601593295212","slicing and dicing files.py"
+"e","","# ","9649","1601593295216","slicing and dicing files.py"
+"e","","# ","9598","1601593295219","slicing and dicing files.py"
+"e","","# ","9560","1601593295223","slicing and dicing files.py"
+"e","","# ","9525","1601593295226","slicing and dicing files.py"
+"e","","# ","9489","1601593295230","slicing and dicing files.py"
+"e","","# ","9475","1601593295234","slicing and dicing files.py"
+"e","","# ","9472","1601593295237","slicing and dicing files.py"
+"e","","# ","9416","1601593295241","slicing and dicing files.py"
+"e","","# ","9318","1601593295244","slicing and dicing files.py"
+"e","","# ","9206","1601593295248","slicing and dicing files.py"
+"e","","# ","9152","1601593295251","slicing and dicing files.py"
+"e","","# ","9118","1601593295255","slicing and dicing files.py"
+"e","","# ","9115","1601593295259","slicing and dicing files.py"
+"e","","# ","9053","1601593295262","slicing and dicing files.py"
+"e","","# ","9023","1601593295266","slicing and dicing files.py"
+"e","","# ","9020","1601593295270","slicing and dicing files.py"
+"e","","# ","8964","1601593295273","slicing and dicing files.py"
+"e","","# ","8893","1601593295277","slicing and dicing files.py"
+"e","","# ","8837","1601593295280","slicing and dicing files.py"
+"e","","# ","8739","1601593295283","slicing and dicing files.py"
+"e","","# ","8701","1601593295286","slicing and dicing files.py"
+"e","","# ","8589","1601593295290","slicing and dicing files.py"
+"e","","# ","8553","1601593295293","slicing and dicing files.py"
+"e","","# ","8550","1601593295296","slicing and dicing files.py"
+"e","","# ","8486","1601593295300","slicing and dicing files.py"
+"e","","# ","8467","1601593295303","slicing and dicing files.py"
+"e","","# ","8434","1601593295306","slicing and dicing files.py"
+"e","","# ","8431","1601593295310","slicing and dicing files.py"
+"e","","# ","8361","1601593295313","slicing and dicing files.py"
+"e","","# ","8337","1601593295316","slicing and dicing files.py"
+"e","","# ","8271","1601593295319","slicing and dicing files.py"
+"e","","# ","8207","1601593295323","slicing and dicing files.py"
+"e","","# ","8176","1601593295326","slicing and dicing files.py"
+"e","","# ","8106","1601593295329","slicing and dicing files.py"
+"e","","# ","8082","1601593295333","slicing and dicing files.py"
+"e","","# ","8016","1601593295336","slicing and dicing files.py"
+"e","","# ","7952","1601593295339","slicing and dicing files.py"
+"e","","# ","7900","1601593295342","slicing and dicing files.py"
+"e","","# ","7868","1601593295346","slicing and dicing files.py"
+"e","","# ","7828","1601593295349","slicing and dicing files.py"
+"e","","# ","7792","1601593295354","slicing and dicing files.py"
+"e","","# ","7714","1601593295357","slicing and dicing files.py"
+"e","","# ","7666","1601593295360","slicing and dicing files.py"
+"e","","# ","7628","1601593295364","slicing and dicing files.py"
+"e","","# ","7601","1601593295367","slicing and dicing files.py"
+"e","","# ","7598","1601593295370","slicing and dicing files.py"
+"e","","# ","7557","1601593295374","slicing and dicing files.py"
+"e","","# ","7525","1601593295377","slicing and dicing files.py"
+"e","","# ","7485","1601593295380","slicing and dicing files.py"
+"e","","# ","7450","1601593295384","slicing and dicing files.py"
+"e","","# ","7447","1601593295387","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593298665","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593298766","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593298867","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593298968","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593299073","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593299174","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593299274","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593299380","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593299492","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593299585","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593299689","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593299793","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593299894","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593299996","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593300100","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593300201","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593300304","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593300407","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593300515","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593300610","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593300716","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593300818","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593300923","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593301024","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593301127","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593301240","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593301335","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593301437","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593301538","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593301643","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593301745","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593301849","slicing and dicing files.py"
+"a","Comment with Line Comment",,,"1601593304757","slicing and dicing files.py"
+"e","","# ","7437","1601593304763","slicing and dicing files.py"
+"e","","# ","7401","1601593304767","slicing and dicing files.py"
+"e","","# ","7398","1601593304770","slicing and dicing files.py"
+"e","","# ","7368","1601593304774","slicing and dicing files.py"
+"e","","# ","7320","1601593304778","slicing and dicing files.py"
+"e","","# ","7292","1601593304781","slicing and dicing files.py"
+"e","","# ","7265","1601593304785","slicing and dicing files.py"
+"e","","# ","7262","1601593304789","slicing and dicing files.py"
+"e","","# ","7259","1601593304792","slicing and dicing files.py"
+"e","","# ","7244","1601593304796","slicing and dicing files.py"
+"e","","# ","7219","1601593304800","slicing and dicing files.py"
+"e","","# ","7197","1601593304803","slicing and dicing files.py"
+"e","","# ","7172","1601593304807","slicing and dicing files.py"
+"e","","# ","7149","1601593304811","slicing and dicing files.py"
+"e","","# ","7128","1601593304814","slicing and dicing files.py"
+"e","","# ","7105","1601593304818","slicing and dicing files.py"
+"e","","# ","7102","1601593304821","slicing and dicing files.py"
+"e","","# ","7099","1601593304824","slicing and dicing files.py"
+"e","","# ","7073","1601593304828","slicing and dicing files.py"
+"e","","# ","7070","1601593304831","slicing and dicing files.py"
+"e","","# ","7058","1601593304835","slicing and dicing files.py"
+"e","","# ","7007","1601593304838","slicing and dicing files.py"
+"e","","# ","6975","1601593304841","slicing and dicing files.py"
+"e","","# ","6945","1601593304845","slicing and dicing files.py"
+"e","","# ","6916","1601593304849","slicing and dicing files.py"
+"e","","# ","6884","1601593304853","slicing and dicing files.py"
+"e","","# ","6855","1601593304856","slicing and dicing files.py"
+"e","","# ","6843","1601593304859","slicing and dicing files.py"
+"e","","# ","6815","1601593304863","slicing and dicing files.py"
+"e","","# ","6812","1601593304866","slicing and dicing files.py"
+"e","","# ","6800","1601593304870","slicing and dicing files.py"
+"e","","# ","6749","1601593304873","slicing and dicing files.py"
+"e","","# ","6717","1601593304877","slicing and dicing files.py"
+"e","","# ","6687","1601593304880","slicing and dicing files.py"
+"e","","# ","6658","1601593304884","slicing and dicing files.py"
+"e","","# ","6626","1601593304887","slicing and dicing files.py"
+"e","","# ","6597","1601593304891","slicing and dicing files.py"
+"e","","# ","6575","1601593304894","slicing and dicing files.py"
+"e","","# ","6572","1601593304898","slicing and dicing files.py"
+"e","","# ","6569","1601593304901","slicing and dicing files.py"
+"e","","# ","6557","1601593304905","slicing and dicing files.py"
+"e","","# ","6541","1601593304908","slicing and dicing files.py"
+"e","","# ","6521","1601593304912","slicing and dicing files.py"
+"e","","# ","6479","1601593304915","slicing and dicing files.py"
+"e","","# ","6436","1601593304919","slicing and dicing files.py"
+"e","","# ","6393","1601593304922","slicing and dicing files.py"
+"e","","# ","6365","1601593304925","slicing and dicing files.py"
+"e","","# ","6332","1601593304928","slicing and dicing files.py"
+"e","","# ","6305","1601593304932","slicing and dicing files.py"
+"e","","# ","6277","1601593304935","slicing and dicing files.py"
+"e","","# ","6267","1601593304940","slicing and dicing files.py"
+"e","","# ","6264","1601593304943","slicing and dicing files.py"
+"e","","# ","6249","1601593304946","slicing and dicing files.py"
+"e","","# ","6223","1601593304950","slicing and dicing files.py"
+"e","","# ","6220","1601593304953","slicing and dicing files.py"
+"e","","# ","6195","1601593304956","slicing and dicing files.py"
+"e","","# ","6163","1601593304962","slicing and dicing files.py"
+"e","","# ","6160","1601593304965","slicing and dicing files.py"
+"e",""," #","6054","1601593304968","slicing and dicing files.py"
+"e","","# ","6050","1601593304972","slicing and dicing files.py"
+"e","","# ","6047","1601593304975","slicing and dicing files.py"
+"e","","# ","6033","1601593304978","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593307523","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593307627","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593307727","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593307830","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593307936","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593308041","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593308146","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593308251","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593308351","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593308454","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593308559","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593308660","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593308763","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593308867","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593308973","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593309072","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593309177","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593309288","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593309385","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593309488","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593309590","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593309690","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593309790","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593309891","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593309992","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593310093","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593310197","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593310299","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593310403","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593310501","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593310602","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593310708","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593310808","slicing and dicing files.py"
+"a","Comment with Line Comment",,,"1601593313067","slicing and dicing files.py"
+"e","","# ","6003","1601593313075","slicing and dicing files.py"
+"e","","# ","6000","1601593313080","slicing and dicing files.py"
+"e","","# ","5997","1601593313084","slicing and dicing files.py"
+"e","","# ","5973","1601593313088","slicing and dicing files.py"
+"e","","# ","5938","1601593313092","slicing and dicing files.py"
+"e","","# ","5935","1601593313096","slicing and dicing files.py"
+"e","","# ","5889","1601593313099","slicing and dicing files.py"
+"e","","# ","5839","1601593313103","slicing and dicing files.py"
+"e","","# ","5836","1601593313108","slicing and dicing files.py"
+"e","","# ","5791","1601593313111","slicing and dicing files.py"
+"e","","# ","5783","1601593313115","slicing and dicing files.py"
+"e","","# ","5756","1601593313118","slicing and dicing files.py"
+"e","","# ","5738","1601593313122","slicing and dicing files.py"
+"e","","# ","5709","1601593313125","slicing and dicing files.py"
+"e","","# ","5677","1601593313129","slicing and dicing files.py"
+"e","","# ","5674","1601593313132","slicing and dicing files.py"
+"e","","# ","5671","1601593313135","slicing and dicing files.py"
+"e","","# ","5607","1601593313139","slicing and dicing files.py"
+"e","","# ","5534","1601593313142","slicing and dicing files.py"
+"e","","# ","5531","1601593313146","slicing and dicing files.py"
+"e","","# ","5513","1601593313149","slicing and dicing files.py"
+"e","","# ","5468","1601593313152","slicing and dicing files.py"
+"e","","# ","5417","1601593313156","slicing and dicing files.py"
+"e","","# ","5379","1601593313159","slicing and dicing files.py"
+"e","","# ","5346","1601593313163","slicing and dicing files.py"
+"e","","# ","5304","1601593313166","slicing and dicing files.py"
+"e","","# ","5285","1601593313169","slicing and dicing files.py"
+"e","","# ","5264","1601593313172","slicing and dicing files.py"
+"e","","# ","5243","1601593313176","slicing and dicing files.py"
+"e","","# ","5220","1601593313179","slicing and dicing files.py"
+"e","","# ","5204","1601593313182","slicing and dicing files.py"
+"e","","# ","5180","1601593313186","slicing and dicing files.py"
+"e","","# ","5155","1601593313191","slicing and dicing files.py"
+"e","","# ","5130","1601593313195","slicing and dicing files.py"
+"e","","# ","5115","1601593313199","slicing and dicing files.py"
+"e","","# ","5101","1601593313203","slicing and dicing files.py"
+"e","","# ","5041","1601593313206","slicing and dicing files.py"
+"e","","# ","5024","1601593313210","slicing and dicing files.py"
+"e","","# ","4991","1601593313214","slicing and dicing files.py"
+"e","","# ","4988","1601593313217","slicing and dicing files.py"
+"e","","# ","4985","1601593313220","slicing and dicing files.py"
+"e","","# ","4918","1601593313224","slicing and dicing files.py"
+"e","","# ","4879","1601593313227","slicing and dicing files.py"
+"e","","# ","4837","1601593313231","slicing and dicing files.py"
+"e","","# ","4834","1601593313234","slicing and dicing files.py"
+"e","","# ","4817","1601593313237","slicing and dicing files.py"
+"e","","# ","4746","1601593313240","slicing and dicing files.py"
+"e","","# ","4706","1601593313243","slicing and dicing files.py"
+"e","","# ","4665","1601593313246","slicing and dicing files.py"
+"e","","# ","4662","1601593313249","slicing and dicing files.py"
+"e","","# ","4659","1601593313252","slicing and dicing files.py"
+"e","","# ","4640","1601593313255","slicing and dicing files.py"
+"e","","# ","4618","1601593313259","slicing and dicing files.py"
+"e","","# ","4593","1601593313262","slicing and dicing files.py"
+"e","","# ","4520","1601593313265","slicing and dicing files.py"
+"e","","# ","4517","1601593313268","slicing and dicing files.py"
+"e","","# ","4514","1601593313271","slicing and dicing files.py"
+"e","","# ","4500","1601593313274","slicing and dicing files.py"
+"e","","# ","4461","1601593313277","slicing and dicing files.py"
+"e","","# ","4458","1601593313280","slicing and dicing files.py"
+"e","","# ","4433","1601593313283","slicing and dicing files.py"
+"e","","# ","4408","1601593313286","slicing and dicing files.py"
+"e","","# ","4405","1601593313289","slicing and dicing files.py"
+"e","","# ","4371","1601593313292","slicing and dicing files.py"
+"e","","# ","4334","1601593313296","slicing and dicing files.py"
+"e","","# ","4306","1601593313299","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593316194","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593316298","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593316400","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593316501","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593316605","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593316707","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593316811","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593316911","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593317011","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593317111","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593317211","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593317313","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593317415","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593317515","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593317616","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593317718","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593317818","slicing and dicing files.py"
+"a","Comment with Line Comment",,,"1601593320429","slicing and dicing files.py"
+"e","# ","","4305","1601593320435","slicing and dicing files.py"
+"e","# ","","4302","1601593320441","slicing and dicing files.py"
+"e"," #","","4256","1601593320446","slicing and dicing files.py"
+"e"," #","","4205","1601593320451","slicing and dicing files.py"
+"e","# ","","4203","1601593320455","slicing and dicing files.py"
+"e"," #","","4177","1601593320459","slicing and dicing files.py"
+"e"," #","","4150","1601593320463","slicing and dicing files.py"
+"e"," #","","4121","1601593320467","slicing and dicing files.py"
+"e"," #","","4087","1601593320471","slicing and dicing files.py"
+"e"," #","","4050","1601593320474","slicing and dicing files.py"
+"e"," #","","4022","1601593320478","slicing and dicing files.py"
+"e","# ","","4020","1601593320482","slicing and dicing files.py"
+"e","# ","","4017","1601593320485","slicing and dicing files.py"
+"e"," #","","3971","1601593320489","slicing and dicing files.py"
+"e"," #","","3920","1601593320492","slicing and dicing files.py"
+"e","# ","","3918","1601593320496","slicing and dicing files.py"
+"e"," #","","3892","1601593320499","slicing and dicing files.py"
+"e"," #","","3865","1601593320503","slicing and dicing files.py"
+"e"," #","","3836","1601593320507","slicing and dicing files.py"
+"e","# ","","3834","1601593320510","slicing and dicing files.py"
+"e"," #","","3810","1601593320514","slicing and dicing files.py"
+"e"," #","","3751","1601593320518","slicing and dicing files.py"
+"e"," #","","3728","1601593320521","slicing and dicing files.py"
+"e"," #","","3690","1601593320525","slicing and dicing files.py"
+"e","# ","","3688","1601593320528","slicing and dicing files.py"
+"e"," #","","3649","1601593320531","slicing and dicing files.py"
+"e"," #","","3578","1601593320535","slicing and dicing files.py"
+"e"," #","","3560","1601593320538","slicing and dicing files.py"
+"e","# ","","3558","1601593320542","slicing and dicing files.py"
+"e"," #","","3483","1601593320545","slicing and dicing files.py"
+"e","# ","","3432","1601593320548","slicing and dicing files.py"
+"e","# ","","3431","1601593320552","slicing and dicing files.py"
+"e"," #","","3377","1601593320555","slicing and dicing files.py"
+"e","# ","","3375","1601593320558","slicing and dicing files.py"
+"e"," #","","3358","1601593320562","slicing and dicing files.py"
+"e"," #","","3341","1601593320565","slicing and dicing files.py"
+"e"," #","","3320","1601593320569","slicing and dicing files.py"
+"e"," #","","3289","1601593320574","slicing and dicing files.py"
+"e"," #","","3269","1601593320578","slicing and dicing files.py"
+"e"," #","","3238","1601593320582","slicing and dicing files.py"
+"e"," #","","3206","1601593320585","slicing and dicing files.py"
+"e"," #","","3171","1601593320589","slicing and dicing files.py"
+"e"," #","","3140","1601593320592","slicing and dicing files.py"
+"e"," #","","3117","1601593320595","slicing and dicing files.py"
+"e"," #","","3095","1601593320599","slicing and dicing files.py"
+"e"," #","","3077","1601593320602","slicing and dicing files.py"
+"e"," #","","3063","1601593320606","slicing and dicing files.py"
+"e","# ","","3033","1601593320609","slicing and dicing files.py"
+"e","# ","","3032","1601593320613","slicing and dicing files.py"
+"e"," #","","3016","1601593320616","slicing and dicing files.py"
+"e","# ","","3014","1601593320620","slicing and dicing files.py"
+"e"," #","","2984","1601593320623","slicing and dicing files.py"
+"e"," #","","2953","1601593320627","slicing and dicing files.py"
+"e"," #","","2914","1601593320630","slicing and dicing files.py"
+"e","# ","","2912","1601593320634","slicing and dicing files.py"
+"e"," #","","2887","1601593320637","slicing and dicing files.py"
+"e"," #","","2850","1601593320640","slicing and dicing files.py"
+"e"," #","","2827","1601593320644","slicing and dicing files.py"
+"e","# ","","2825","1601593320647","slicing and dicing files.py"
+"e"," #","","2809","1601593320651","slicing and dicing files.py"
+"e"," #","","2770","1601593320655","slicing and dicing files.py"
+"e"," #","","2740","1601593320659","slicing and dicing files.py"
+"e"," #","","2719","1601593320662","slicing and dicing files.py"
+"e"," #","","2699","1601593320665","slicing and dicing files.py"
+"e"," #","","2680","1601593320669","slicing and dicing files.py"
+"e","# ","","2601","1601593320672","slicing and dicing files.py"
+"e","# ","","2600","1601593320675","slicing and dicing files.py"
+"e","# ","","2568","1601593320679","slicing and dicing files.py"
+"e","# ","","2567","1601593320683","slicing and dicing files.py"
+"e","# ","","2566","1601593320686","slicing and dicing files.py"
+"e"," #","","2523","1601593320690","slicing and dicing files.py"
+"a","Comment with Line Comment",,,"1601593323804","slicing and dicing files.py"
+"e","","# ","4445","1601593323810","slicing and dicing files.py"
+"e","","# ","4440","1601593323815","slicing and dicing files.py"
+"e",""," #","4392","1601593323819","slicing and dicing files.py"
+"e",""," #","4339","1601593323823","slicing and dicing files.py"
+"e","","# ","4335","1601593323827","slicing and dicing files.py"
+"e",""," #","4307","1601593323830","slicing and dicing files.py"
+"e",""," #","4278","1601593323834","slicing and dicing files.py"
+"e",""," #","4247","1601593323837","slicing and dicing files.py"
+"e",""," #","4211","1601593323841","slicing and dicing files.py"
+"e",""," #","4172","1601593323844","slicing and dicing files.py"
+"e",""," #","4142","1601593323848","slicing and dicing files.py"
+"e","","# ","4138","1601593323852","slicing and dicing files.py"
+"e","","# ","4133","1601593323855","slicing and dicing files.py"
+"e",""," #","4085","1601593323859","slicing and dicing files.py"
+"e",""," #","4032","1601593323862","slicing and dicing files.py"
+"e","","# ","4028","1601593323865","slicing and dicing files.py"
+"e",""," #","4000","1601593323869","slicing and dicing files.py"
+"e",""," #","3971","1601593323872","slicing and dicing files.py"
+"e",""," #","3940","1601593323876","slicing and dicing files.py"
+"e","","# ","3936","1601593323879","slicing and dicing files.py"
+"e",""," #","3910","1601593323882","slicing and dicing files.py"
+"e",""," #","3849","1601593323886","slicing and dicing files.py"
+"e",""," #","3824","1601593323890","slicing and dicing files.py"
+"e",""," #","3784","1601593323893","slicing and dicing files.py"
+"e","","# ","3780","1601593323897","slicing and dicing files.py"
+"e",""," #","3739","1601593323900","slicing and dicing files.py"
+"e",""," #","3666","1601593323903","slicing and dicing files.py"
+"e",""," #","3646","1601593323907","slicing and dicing files.py"
+"e","","# ","3642","1601593323910","slicing and dicing files.py"
+"e",""," #","3565","1601593323914","slicing and dicing files.py"
+"e",""," #","3513","1601593323917","slicing and dicing files.py"
+"e","","# ","3509","1601593323920","slicing and dicing files.py"
+"e",""," #","3453","1601593323924","slicing and dicing files.py"
+"e","","# ","3449","1601593323927","slicing and dicing files.py"
+"e",""," #","3430","1601593323930","slicing and dicing files.py"
+"e",""," #","3411","1601593323933","slicing and dicing files.py"
+"e",""," #","3388","1601593323936","slicing and dicing files.py"
+"e",""," #","3355","1601593323939","slicing and dicing files.py"
+"e",""," #","3333","1601593323942","slicing and dicing files.py"
+"e",""," #","3300","1601593323946","slicing and dicing files.py"
+"e",""," #","3266","1601593323949","slicing and dicing files.py"
+"e",""," #","3229","1601593323952","slicing and dicing files.py"
+"e",""," #","3196","1601593323955","slicing and dicing files.py"
+"e",""," #","3171","1601593323958","slicing and dicing files.py"
+"e",""," #","3147","1601593323961","slicing and dicing files.py"
+"e",""," #","3127","1601593323964","slicing and dicing files.py"
+"e",""," #","3111","1601593323968","slicing and dicing files.py"
+"e",""," #","3080","1601593323971","slicing and dicing files.py"
+"e","","# ","3076","1601593323974","slicing and dicing files.py"
+"e",""," #","3058","1601593323978","slicing and dicing files.py"
+"e","","# ","3054","1601593323981","slicing and dicing files.py"
+"e",""," #","3022","1601593323984","slicing and dicing files.py"
+"e",""," #","2989","1601593323987","slicing and dicing files.py"
+"e",""," #","2948","1601593323990","slicing and dicing files.py"
+"e","","# ","2944","1601593323996","slicing and dicing files.py"
+"e",""," #","2917","1601593323999","slicing and dicing files.py"
+"e",""," #","2878","1601593324002","slicing and dicing files.py"
+"e",""," #","2853","1601593324005","slicing and dicing files.py"
+"e","","# ","2849","1601593324008","slicing and dicing files.py"
+"e",""," #","2831","1601593324011","slicing and dicing files.py"
+"e",""," #","2790","1601593324014","slicing and dicing files.py"
+"e",""," #","2758","1601593324017","slicing and dicing files.py"
+"e",""," #","2735","1601593324020","slicing and dicing files.py"
+"e",""," #","2713","1601593324023","slicing and dicing files.py"
+"e",""," #","2692","1601593324026","slicing and dicing files.py"
+"e",""," #","2612","1601593324029","slicing and dicing files.py"
+"e","","# ","2608","1601593324032","slicing and dicing files.py"
+"e","","# ","2574","1601593324035","slicing and dicing files.py"
+"e","","# ","2571","1601593324039","slicing and dicing files.py"
+"e","","# ","2568","1601593324042","slicing and dicing files.py"
+"e",""," #","2523","1601593324045","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593329067","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593329167","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593329270","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593329373","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593329474","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593329575","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593329677","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593329780","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593329883","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593329990","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593330086","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593330191","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593330293","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593330391","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593330492","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593330594","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593330699","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593330807","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593330908","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593331009","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593331113","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593331218","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593331318","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593331418","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593331518","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593331620","slicing and dicing files.py"
+"a","Comment with Line Comment",,,"1601593334494","slicing and dicing files.py"
+"e","","# ","3376","1601593334501","slicing and dicing files.py"
+"e","","# ","3373","1601593334506","slicing and dicing files.py"
+"e","","# ","3357","1601593334511","slicing and dicing files.py"
+"e","","# ","3340","1601593334516","slicing and dicing files.py"
+"e","","# ","3319","1601593334519","slicing and dicing files.py"
+"e","","# ","3288","1601593334523","slicing and dicing files.py"
+"e","","# ","3268","1601593334526","slicing and dicing files.py"
+"e","","# ","3237","1601593334530","slicing and dicing files.py"
+"e","","# ","3205","1601593334533","slicing and dicing files.py"
+"e","","# ","3170","1601593334537","slicing and dicing files.py"
+"e","","# ","3139","1601593334540","slicing and dicing files.py"
+"e","","# ","3116","1601593334543","slicing and dicing files.py"
+"e","","# ","3094","1601593334546","slicing and dicing files.py"
+"e","","# ","3076","1601593334550","slicing and dicing files.py"
+"e","","# ","3062","1601593334553","slicing and dicing files.py"
+"e","","# ","3033","1601593334557","slicing and dicing files.py"
+"e","","# ","3015","1601593334560","slicing and dicing files.py"
+"e","","# ","3012","1601593334563","slicing and dicing files.py"
+"e","","# ","2983","1601593334567","slicing and dicing files.py"
+"e","","# ","2952","1601593334570","slicing and dicing files.py"
+"e","","# ","2913","1601593334573","slicing and dicing files.py"
+"e","","# ","2910","1601593334576","slicing and dicing files.py"
+"e","","# ","2886","1601593334579","slicing and dicing files.py"
+"e","","# ","2849","1601593334582","slicing and dicing files.py"
+"e","","# ","2826","1601593334585","slicing and dicing files.py"
+"e","","# ","2823","1601593334589","slicing and dicing files.py"
+"e","","# ","2808","1601593334592","slicing and dicing files.py"
+"e","","# ","2769","1601593334595","slicing and dicing files.py"
+"e","","# ","2739","1601593334598","slicing and dicing files.py"
+"e","","# ","2718","1601593334601","slicing and dicing files.py"
+"e","","# ","2698","1601593334605","slicing and dicing files.py"
+"e","","# ","2679","1601593334608","slicing and dicing files.py"
+"e","","# ","2601","1601593334611","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593338148","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593338254","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593338354","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593338455","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593338555","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593338659","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593338759","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593338861","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593338966","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593339071","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593339174","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593340577","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593340677","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593340782","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593340887","slicing and dicing files.py"
+"a","Comment with Line Comment",,,"1601593343635","slicing and dicing files.py"
+"e","","# ","4237","1601593343642","slicing and dicing files.py"
+"e","","# ","4234","1601593343648","slicing and dicing files.py"
+"e","","# ","4189","1601593343653","slicing and dicing files.py"
+"e","","# ","4138","1601593343657","slicing and dicing files.py"
+"e","","# ","4135","1601593343661","slicing and dicing files.py"
+"e","","# ","4110","1601593343665","slicing and dicing files.py"
+"e","","# ","4083","1601593343668","slicing and dicing files.py"
+"e","","# ","4054","1601593343672","slicing and dicing files.py"
+"e","","# ","4020","1601593343676","slicing and dicing files.py"
+"e","","# ","3983","1601593343679","slicing and dicing files.py"
+"e","","# ","3955","1601593343683","slicing and dicing files.py"
+"e","","# ","3952","1601593343687","slicing and dicing files.py"
+"e","","# ","3949","1601593343691","slicing and dicing files.py"
+"e","","# ","3904","1601593343696","slicing and dicing files.py"
+"e","","# ","3853","1601593343700","slicing and dicing files.py"
+"e","","# ","3850","1601593343703","slicing and dicing files.py"
+"e","","# ","3825","1601593343706","slicing and dicing files.py"
+"e","","# ","3798","1601593343710","slicing and dicing files.py"
+"e","","# ","3769","1601593343713","slicing and dicing files.py"
+"e","","# ","3766","1601593343716","slicing and dicing files.py"
+"e","","# ","3743","1601593343720","slicing and dicing files.py"
+"e","","# ","3684","1601593343723","slicing and dicing files.py"
+"e","","# ","3661","1601593343726","slicing and dicing files.py"
+"e","","# ","3623","1601593343729","slicing and dicing files.py"
+"e","","# ","3620","1601593343733","slicing and dicing files.py"
+"e","","# ","3582","1601593343736","slicing and dicing files.py"
+"e","","# ","3511","1601593343740","slicing and dicing files.py"
+"e","","# ","3493","1601593343743","slicing and dicing files.py"
+"e","","# ","3490","1601593343747","slicing and dicing files.py"
+"e","","# ","3416","1601593343750","slicing and dicing files.py"
+"e","","# ","3366","1601593343753","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593349581","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593349684","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593349789","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593349890","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593349993","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593350097","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593350194","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593350294","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593350395","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593350496","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593350597","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593350700","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593350807","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593350905","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593351005","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593351105","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593351206","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593351309","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593351413","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593351521","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593351618","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593351720","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593351825","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593351930","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593352034","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593352135","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593352235","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593352335","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593352440","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593352544","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593352649","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593352748","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593352851","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593352955","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593353059","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593353159","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593353261","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593353362","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593353466","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593353567","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593353670","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593353772","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593353876","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593353980","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593354486","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593354590","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593354690","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593354793","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593354898","slicing and dicing files.py"
+"a","Comment with Line Comment",,,"1601593357654","slicing and dicing files.py"
+"e","","# ","2522","1601593357661","slicing and dicing files.py"
+"e","","# ","2495","1601593357665","slicing and dicing files.py"
+"e","","# ","2475","1601593357669","slicing and dicing files.py"
+"e","","# ","2451","1601593357674","slicing and dicing files.py"
+"e","","# ","2426","1601593357677","slicing and dicing files.py"
+"e","","# ","2406","1601593357680","slicing and dicing files.py"
+"e","","# ","2381","1601593357684","slicing and dicing files.py"
+"e","","# ","2350","1601593357687","slicing and dicing files.py"
+"e","","# ","2312","1601593357690","slicing and dicing files.py"
+"e","","# ","2264","1601593357694","slicing and dicing files.py"
+"e","","# ","2216","1601593357697","slicing and dicing files.py"
+"e","","# ","2193","1601593357699","slicing and dicing files.py"
+"e","","# ","2155","1601593357702","slicing and dicing files.py"
+"e","","# ","2122","1601593357706","slicing and dicing files.py"
+"e","","# ","2096","1601593357709","slicing and dicing files.py"
+"e","","# ","2078","1601593357712","slicing and dicing files.py"
+"e","","# ","2041","1601593357715","slicing and dicing files.py"
+"e","","# ","1999","1601593357719","slicing and dicing files.py"
+"e","","# ","1984","1601593357722","slicing and dicing files.py"
+"e","","# ","1898","1601593357725","slicing and dicing files.py"
+"e","","# ","1879","1601593357732","slicing and dicing files.py"
+"e","","# ","1847","1601593357735","slicing and dicing files.py"
+"e","","# ","1827","1601593357738","slicing and dicing files.py"
+"e","","# ","1777","1601593357741","slicing and dicing files.py"
+"e","","# ","1752","1601593357744","slicing and dicing files.py"
+"e","","# ","1717","1601593357747","slicing and dicing files.py"
+"e","","# ","1676","1601593357750","slicing and dicing files.py"
+"e","","# ","1665","1601593357753","slicing and dicing files.py"
+"e","","        ","1665","1601593357757","slicing and dicing files.py"
+"e","","# ","1645","1601593357760","slicing and dicing files.py"
+"e","","# ","1611","1601593357762","slicing and dicing files.py"
+"e","","# ","1594","1601593357765","slicing and dicing files.py"
+"e","","# ","1579","1601593357769","slicing and dicing files.py"
+"e","","# ","1554","1601593357772","slicing and dicing files.py"
+"e","","# ","1513","1601593357775","slicing and dicing files.py"
+"e","","# ","1510","1601593357778","slicing and dicing files.py"
+"e","","# ","1491","1601593357782","slicing and dicing files.py"
+"e","","# ","1460","1601593357785","slicing and dicing files.py"
+"e","","# ","1444","1601593357788","slicing and dicing files.py"
+"e","","# ","1433","1601593357791","slicing and dicing files.py"
+"e","","        ","1433","1601593357794","slicing and dicing files.py"
+"e","","# ","1408","1601593357797","slicing and dicing files.py"
+"e","","# ","1383","1601593357800","slicing and dicing files.py"
+"e","","# ","1356","1601593357803","slicing and dicing files.py"
+"e","","# ","1319","1601593357806","slicing and dicing files.py"
+"e","","# ","1306","1601593357809","slicing and dicing files.py"
+"e","","# ","1278","1601593357812","slicing and dicing files.py"
+"e","","# ","1198","1601593357815","slicing and dicing files.py"
+"e","","# ","1195","1601593357818","slicing and dicing files.py"
+"e","","# ","1192","1601593357821","slicing and dicing files.py"
+"e","","# ","1173","1601593357824","slicing and dicing files.py"
+"e","","# ","1170","1601593357827","slicing and dicing files.py"
+"e","","# ","1140","1601593357830","slicing and dicing files.py"
+"e","","# ","1106","1601593357833","slicing and dicing files.py"
+"e","","# ","1059","1601593357836","slicing and dicing files.py"
+"e","","# ","1056","1601593357840","slicing and dicing files.py"
+"e","","# ","1010","1601593357842","slicing and dicing files.py"
+"e","","# ","932","1601593357845","slicing and dicing files.py"
+"e","","# ","929","1601593357848","slicing and dicing files.py"
+"e","","# ","900","1601593357851","slicing and dicing files.py"
+"e","","# ","869","1601593357854","slicing and dicing files.py"
+"e","","# ","866","1601593357857","slicing and dicing files.py"
+"e","","# ","845","1601593357860","slicing and dicing files.py"
+"e","","# ","833","1601593357863","slicing and dicing files.py"
+"e","","# ","784","1601593357866","slicing and dicing files.py"
+"e","","# ","711","1601593357869","slicing and dicing files.py"
+"e","","# ","644","1601593357872","slicing and dicing files.py"
+"e","","# ","577","1601593357875","slicing and dicing files.py"
+"e","","# ","555","1601593357878","slicing and dicing files.py"
+"e","","# ","528","1601593357881","slicing and dicing files.py"
+"e","","# ","501","1601593357884","slicing and dicing files.py"
+"e","","# ","474","1601593357887","slicing and dicing files.py"
+"e","","# ","463","1601593357890","slicing and dicing files.py"
+"e","","# ","440","1601593357893","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593360320","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593360422","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593360523","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593360624","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593360724","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593360825","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593360927","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593361031","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593361134","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593361243","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593361336","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593361444","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593361557","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593361644","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593361744","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593361849","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593361952","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593362053","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593362155","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593362258","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593362358","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593362458","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593362561","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593362665","slicing and dicing files.py"
+"a","Move Cursor",,,"1601593362766","slicing and dicing files.py"
+"a","Install package requests",,,"1601593367472","slicing and dicing files.py"
+"a","Install package requests",,,"1601593369947","slicing and dicing files.py"
+"a","Undefined",,,"1601593573777","slicing and dicing files.py"
+"a","Create Python script allLongestString",,,"1601594832835","slicing and dicing files.py"
+"a","Paste",,,"1601594845534","allLongestString.py"
+"p","def allLongestStrings(inputArray):
+    lst = []
+    a = max(inputArray)
+    for i in inputArray:
+        if len(i) == a:
+           lst.append(i)
+    return lst ",,"0","1601594845604","allLongestString.py"
+"e","def allLongestStrings(inputArray):
+    lst = []
+    a = max(inputArray)
+    for i in inputArray:
+        if len(i) == a:
+           lst.append(i)
+    return lst ","","0","1601594845608","allLongestString.py"
+"a","Enter",,,"1601594847957","allLongestString.py"
+"e","
+    ","","161","1601594848016","allLongestString.py"
+"e","","    ","162","1601594848045","allLongestString.py"
+"a","Enter",,,"1601594848271","allLongestString.py"
+"e","
+","","162","1601594848276","allLongestString.py"
+"e","p","","163","1601594857934","allLongestString.py"
+"k","p",,"164","1601594857935","allLongestString.py"
+"e","r","","164","1601594858120","allLongestString.py"
+"k","r",,"165","1601594858121","allLongestString.py"
+"e","i","","165","1601594858320","allLongestString.py"
+"k","i",,"166","1601594858321","allLongestString.py"
+"a","Choose Lookup Item",,,"1601594858884","allLongestString.py"
+"e","nt","","166","1601594858895","allLongestString.py"
+"e"," ","","168","1601594858918","allLongestString.py"
+"a","Backspace",,,"1601594859871","allLongestString.py"
+"e",""," ","168","1601594859891","allLongestString.py"
+"e","(","","168","1601594860477","allLongestString.py"
+"e",")","","169","1601594860481","allLongestString.py"
+"k","(",,"169","1601594860484","allLongestString.py"
+"e","a","","169","1601594861040","allLongestString.py"
+"k","a",,"170","1601594861041","allLongestString.py"
+"a","Choose Lookup Item",,,"1601594861948","allLongestString.py"
+"e","llLongestStrings","","170","1601594861960","allLongestString.py"
+"e","(","","186","1601594861970","allLongestString.py"
+"e",")","","188","1601594861975","allLongestString.py"
+"a","Paste",,,"1601594864307","allLongestString.py"
+"p","[""aba"", ""aa"", ""ad"", ""vcd"", ""aba""]",,"187","1601594864315","allLongestString.py"
+"e","[""aba"", ""aa"", ""ad"", ""vcd"", ""aba""]","","187","1601594864324","allLongestString.py"
+"a","Import 'heapq'",,,"1601594873589","allLongestString.py"
+"e","import heapqdef findMaximizedCapital(k: int, W: int, P: List[int], C: List[int]) -> int:
+    if W > max(C):
+        return W + sum(heapq.nlargest(k, P))
+
+    minH = [[C[x], x] for x in range(len(C))]
+    maxH = []
+    heapq.heapify(minH)
+    while k:
+        while minH and minH[0][0] <= W:
+            _, idx = heappop(minH)
+            heappush(maxH, -P[idx])
+
+        if not maxH:
+            break
+
+        W += -heappop(maxH)
+        k -= 1
+
+    return W
+","","0","1601594873609","IPO LC.py"
+"e","
+","","12","1601594873621","IPO LC.py"
+"e","
+
+","","13","1601594873657","IPO LC.py"
+"a","Import this name",,,"1601594877773","allLongestString.py"
+"a","Use an imported module",,,"1601594882314","allLongestString.py"
+"e","heapq.","","315","1601594882323","IPO LC.py"
+"a","Import this name",,,"1601594885692","allLongestString.py"
+"a","Use an imported module",,,"1601594887201","allLongestString.py"
+"e","heapq.","","347","1601594887208","IPO LC.py"
+"a","Import this name",,,"1601594890559","allLongestString.py"
+"a","Use an imported module",,,"1601594892116","allLongestString.py"
+"e","heapq.","","432","1601594892122","IPO LC.py"
+"a","Import this name",,,"1601594896627","allLongestString.py"
+"a","Use an imported module",,,"1601594898035","allLongestString.py"
+"e","from typing import List","","12","1601594898044","IPO LC.py"
+"e","
+","","12","1601594898049","IPO LC.py"
+"a","EditorChange",,,"1601594903959","allLongestString.py"
+"a","Import 'pip._vendor.pep517.compat.FileNotFoundError'",,,"1601594919312","allLongestString.py"
+"e","""""""
+Author : nkalyan🤠
+implementing Python Scripts on reading and returning the name and max no of mails that sent by a person
+""""""
+
+from collections import defaultdictfrom pip._vendor.pep517.compat import FileNotFoundError
+
+
+def get_line(fp):
+    """"""This method yields the each mail at a time and gives input to mail_counter method""""""
+    with fp:
+        for line in fp:
+            string = 'From:'
+            if line.find(string) >= 0:
+                email = line[len(string):].strip()
+                yield email
+
+
+def check_mail(mail):
+    """"""just simply check the format of emails.
+     So every email should contain '@' and '.' at least, or I would raise MailValueError""""""
+    check = [True, True]
+    for item in mail:
+        if item == '@':
+            check[0] = False
+        if item == '.':
+            check[1] = False
+    if not any(check):
+        return True
+
+
+def mail_counter(path):
+    """"""Which returns the name and count of max no of mails sent by the person""""""
+    email_dict = defaultdict(int)
+    for mail in get_line(path):
+        check_mail(mail)
+        email_dict[mail] += 1
+
+    return sorted(email_dict.items(), key=lambda x: x[1], reverse=True)[0]
+
+
+def main():
+    """"""Calls the method and prints the output statements""""""
+
+    path = input(""Please enter file name..: "")
+    # Catching exceptions in opening of file
+    try:
+        fp = open(path, 'r')
+        get_line(fp)
+        counter = mail_counter(fp)
+        print(f'Max no of mails sent from Mail ID: {counter[0]}\nNumber of sent mails are: {counter[1]}')
+
+    except FileNotFoundError:
+        print(f'Cannot open {path}  plz check. ')
+
+    except IndexError:
+        print(""No mail indexes are found in this file"")
+
+
+if __name__ == '__main__':
+    main()
+","","0","1601594919325","counting unique items.py"
+"e","
+","","167","1601594919332","counting unique items.py"
+"e","
+","","168","1601594919344","counting unique items.py"
+"a","EditorChange",,,"1601594922426","allLongestString.py"
+"a","Import this name",,,"1601594931452","allLongestString.py"
+"a","Use an imported module",,,"1601594932809","allLongestString.py"
+"e","from typing import List","","47","1601594932821","slicing and dicing files.py"
+"e","
+","","47","1601594932828","slicing and dicing files.py"
+"e","
+","","72","1601594932842","slicing and dicing files.py"
+"e","'","","3261","1601594946032","slicing and dicing files.py"
+"k","'",,"3262","1601594946033","slicing and dicing files.py"
+"e","'","","3266","1601594948023","slicing and dicing files.py"
+"k","'",,"3267","1601594948024","slicing and dicing files.py"
+"e","'","","3269","1601594949262","slicing and dicing files.py"
+"k","'",,"3270","1601594949263","slicing and dicing files.py"
+"e","'","","3273","1601594950476","slicing and dicing files.py"
+"k","'",,"3274","1601594950477","slicing and dicing files.py"
+"a","Backspace",,,"1601594951603","slicing and dicing files.py"
+"e","","'","3273","1601594951609","slicing and dicing files.py"
+"a","Right",,,"1601594952027","slicing and dicing files.py"
+"e","'","","3274","1601594952829","slicing and dicing files.py"
+"k","'",,"3275","1601594952829","slicing and dicing files.py"
+"e","'","","3313","1601594954998","slicing and dicing files.py"
+"k","'",,"3314","1601594954999","slicing and dicing files.py"
+"e","'","","3318","1601594956361","slicing and dicing files.py"
+"k","'",,"3319","1601594956362","slicing and dicing files.py"
+"e","'","","3321","1601594957663","slicing and dicing files.py"
+"k","'",,"3322","1601594957664","slicing and dicing files.py"
+"e","'","","3325","1601594959066","slicing and dicing files.py"
+"k","'",,"3326","1601594959067","slicing and dicing files.py"
+"a","Backspace",,,"1601594960070","slicing and dicing files.py"
+"e","","'","3325","1601594960073","slicing and dicing files.py"
+"a","Right",,,"1601594960474","slicing and dicing files.py"
+"e","'","","3326","1601594961057","slicing and dicing files.py"
+"k","'",,"3327","1601594961057","slicing and dicing files.py"
+"e","'","","3333","1601594962450","slicing and dicing files.py"
+"e","'","","3334","1601594962455","slicing and dicing files.py"
+"k","'",,"3334","1601594962456","slicing and dicing files.py"
+"e","'","","3329","1601594963471","slicing and dicing files.py"
+"k","'",,"3330","1601594963472","slicing and dicing files.py"
+"a","Backspace",,,"1601594966511","slicing and dicing files.py"
+"e","","'","3335","1601594966517","slicing and dicing files.py"
+"e","'","","3337","1601594969251","slicing and dicing files.py"
+"k","'",,"3338","1601594969252","slicing and dicing files.py"
+"a","Right",,,"1601594970330","slicing and dicing files.py"
+"a","Right",,,"1601594970548","slicing and dicing files.py"
+"a","Right",,,"1601594970724","slicing and dicing files.py"
+"a","Right",,,"1601594970975","slicing and dicing files.py"
+"e","'","","3342","1601594971944","slicing and dicing files.py"
+"k","'",,"3343","1601594971945","slicing and dicing files.py"
+"a","Right",,,"1601594972910","slicing and dicing files.py"
+"a","Right",,,"1601594973126","slicing and dicing files.py"
+"e","'","","3345","1601594974434","slicing and dicing files.py"
+"k","'",,"3346","1601594974435","slicing and dicing files.py"
+"a","Right",,,"1601594975215","slicing and dicing files.py"
+"a","Right",,,"1601594975430","slicing and dicing files.py"
+"a","Right",,,"1601594975631","slicing and dicing files.py"
+"a","Right",,,"1601594975925","slicing and dicing files.py"
+"e","'","","3350","1601594976218","slicing and dicing files.py"
+"k","'",,"3351","1601594976219","slicing and dicing files.py"
+"a","Right",,,"1601594976918","slicing and dicing files.py"
+"a","Right",,,"1601594977129","slicing and dicing files.py"
+"e","'","","3353","1601594977571","slicing and dicing files.py"
+"k","'",,"3354","1601594977571","slicing and dicing files.py"
+"a","Right",,,"1601594977901","slicing and dicing files.py"
+"a","Right",,,"1601594978277","slicing and dicing files.py"
+"a","Right",,,"1601594978481","slicing and dicing files.py"
+"a","Right",,,"1601594978932","slicing and dicing files.py"
+"e","'","","3358","1601594980000","slicing and dicing files.py"
+"k","'",,"3359","1601594980001","slicing and dicing files.py"
+"a","Import 'idlelib.TreeWidget.TreeNode'",,,"1601594983635","slicing and dicing files.py"
+"e","from idlelib.TreeWidget import TreeNode","","0","1601594983646","slicing and dicing files.py"
+"e","
+","","39","1601594983652","slicing and dicing files.py"
+"a","EditorChange",,,"1601594996346","slicing and dicing files.py"
+"a","EditorChange",,,"1601594997016","slicing and dicing files.py"
+"a","EditorChange",,,"1601594997863","slicing and dicing files.py"
+"a","EditorChange",,,"1601594999646","slicing and dicing files.py"
+"a","EditorChange",,,"1601595011037","slicing and dicing files.py"
+"a","EditorChange",,,"1601595011474","slicing and dicing files.py"
+"a","EditorChange",,,"1601595012356","slicing and dicing files.py"
+"a","Close Active Editor",,,"1601595013056","slicing and dicing files.py"
+"a","Close Active Editor",,,"1601595014010","slicing and dicing files.py"
+"a","EditorChange",,,"1601595015417","slicing and dicing files.py"
+"a","Enter",,,"1601595032822","allLongestString.py"
+"e","    
+","","72","1601595032826","allLongestString.py"
+"e","p","","76","1601595033279","allLongestString.py"
+"k","p",,"77","1601595033280","allLongestString.py"
+"e","r","","77","1601595035457","allLongestString.py"
+"k","r",,"78","1601595035466","allLongestString.py"
+"a","Choose Lookup Item",,,"1601595036538","allLongestString.py"
+"e","int","","78","1601595036548","allLongestString.py"
+"e"," ","","81","1601595036576","allLongestString.py"
+"a","Backspace",,,"1601595037658","allLongestString.py"
+"e",""," ","81","1601595037662","allLongestString.py"
+"e","(","","81","1601595038451","allLongestString.py"
+"e",")","","82","1601595038455","allLongestString.py"
+"k","(",,"82","1601595038455","allLongestString.py"
+"e","a","","82","1601595039369","allLongestString.py"
+"k","a",,"83","1601595039370","allLongestString.py"
+"a","Choose Lookup Item",,,"1601595040495","allLongestString.py"
+"r",,,,"1601595043675","allLongestString.py"
+"e","l","","60","1601595053089","allLongestString.py"
+"k","l",,"61","1601595053091","allLongestString.py"
+"e","r","","61","1601595053809","allLongestString.py"
+"k","r",,"62","1601595053852","allLongestString.py"
+"e","n","","62","1601595054291","allLongestString.py"
+"k","n",,"63","1601595054292","allLongestString.py"
+"a","Backspace",,,"1601595055512","allLongestString.py"
+"e","","n","62","1601595055516","allLongestString.py"
+"a","Backspace",,,"1601595055698","allLongestString.py"
+"e","","r","61","1601595055702","allLongestString.py"
+"e","e","","61","1601595056671","allLongestString.py"
+"k","e",,"62","1601595056672","allLongestString.py"
+"e","n","","62","1601595056980","allLongestString.py"
+"k","n",,"63","1601595056989","allLongestString.py"
+"e","(","","63","1601595057611","allLongestString.py"
+"k","(",,"64","1601595057612","allLongestString.py"
+"a","Right",,,"1601595058278","allLongestString.py"
+"a","Right",,,"1601595058462","allLongestString.py"
+"a","Right",,,"1601595058616","allLongestString.py"
+"a","Right",,,"1601595058783","allLongestString.py"
+"a","Right",,,"1601595058948","allLongestString.py"
+"a","Right",,,"1601595059124","allLongestString.py"
+"a","Right",,,"1601595059283","allLongestString.py"
+"a","Right",,,"1601595059472","allLongestString.py"
+"a","Right",,,"1601595059664","allLongestString.py"
+"a","Right",,,"1601595059903","allLongestString.py"
+"a","Right",,,"1601595060493","allLongestString.py"
+"e",")","","75","1601595061567","allLongestString.py"
+"k",")",,"76","1601595061568","allLongestString.py"
+"a","Reformat file",,,"1601595066077","allLongestString.py"
+"e"," ","","150","1601595066086","allLongestString.py"
+"e",""," ","179","1601595066090","allLongestString.py"
+"e","
+","","179","1601595066091","allLongestString.py"
+"e","
+","","241","1601595066093","allLongestString.py"
+"r",,,,"1601595068538","allLongestString.py"
+"a","Backspace",,,"1601595085490","allLongestString.py"
+"e","","(","63","1601595085495","allLongestString.py"
+"a","Backspace",,,"1601595085744","allLongestString.py"
+"e","","n","62","1601595085748","allLongestString.py"
+"a","Backspace",,,"1601595085944","allLongestString.py"
+"e","","e","61","1601595085947","allLongestString.py"
+"a","Backspace",,,"1601595086377","allLongestString.py"
+"e","","l","60","1601595086383","allLongestString.py"
+"a","Backspace",,,"1601595087656","allLongestString.py"
+"e","",")","71","1601595087661","allLongestString.py"
+"e","l","","56","1601595089838","allLongestString.py"
+"k","l",,"57","1601595089839","allLongestString.py"
+"e","e","","57","1601595090232","allLongestString.py"
+"k","e",,"58","1601595090246","allLongestString.py"
+"e","n","","58","1601595090546","allLongestString.py"
+"k","n",,"59","1601595090558","allLongestString.py"
+"e","(","","59","1601595091359","allLongestString.py"
+"k","(",,"60","1601595091359","allLongestString.py"
+"e","(","","75","1601595093138","allLongestString.py"
+"e",")","","76","1601595093143","allLongestString.py"
+"k","(",,"76","1601595093143","allLongestString.py"
+"a","Backspace",,,"1601595094603","allLongestString.py"
+"e","","(","75","1601595094607","allLongestString.py"
+"r",,,,"1601595098170","allLongestString.py"
+"a","Paste",,,"1601595140609","allLongestString.py"
+"p","[""enyky"", 
+ ""benyky"", 
+ ""yely"", 
+ ""varennyky""]",,"206","1601595140617","allLongestString.py"
+"e","","aba"", ""aa"", ""ad"", ""vcd"", ""aba","208","1601595140622","allLongestString.py"
+"e","enyky"", 
+ ""benyky"", 
+ ""yely"", 
+ ""varennyky","","208","1601595140623","allLongestString.py"
+"r",,,,"1601595148405","allLongestString.py"
+"e",",","","74","1601595243949","allLongestString.py"
+"k",",",,"75","1601595243950","allLongestString.py"
+"e"," ","","75","1601595244206","allLongestString.py"
+"k"," ",,"76","1601595244207","allLongestString.py"
+"e","k","","76","1601595245182","allLongestString.py"
+"k","k",,"77","1601595245183","allLongestString.py"
+"e","e","","77","1601595245375","allLongestString.py"
+"k","e",,"78","1601595245381","allLongestString.py"
+"e","y","","78","1601595245723","allLongestString.py"
+"k","y",,"79","1601595245730","allLongestString.py"
+"a","Choose Lookup Item",,,"1601595247280","allLongestString.py"
+"e","=","","79","1601595247289","allLongestString.py"
+"e","l","","80","1601595248431","allLongestString.py"
+"k","l",,"81","1601595248432","allLongestString.py"
+"e","e","","81","1601595248608","allLongestString.py"
+"k","e",,"82","1601595248619","allLongestString.py"
+"e","n","","82","1601595248885","allLongestString.py"
+"k","n",,"83","1601595248895","allLongestString.py"
+"a","Backspace",,,"1601595258423","allLongestString.py"
+"e","","(","59","1601595258427","allLongestString.py"
+"a","Backspace",,,"1601595258612","allLongestString.py"
+"e","","n","58","1601595258615","allLongestString.py"
+"a","Backspace",,,"1601595258807","allLongestString.py"
+"e","","e","57","1601595258810","allLongestString.py"
+"a","Backspace",,,"1601595259031","allLongestString.py"
+"e","","l","56","1601595259036","allLongestString.py"
+"a","Backspace",,,"1601595260211","allLongestString.py"
+"e","",")","80","1601595260216","allLongestString.py"
+"r",,,,"1601595262799","allLongestString.py"
+"r",,,,"1601595268536","allLongestString.py"
+"e","l","","56","1601595272990","allLongestString.py"
+"k","l",,"57","1601595272991","allLongestString.py"
+"e","e","","57","1601595273606","allLongestString.py"
+"k","e",,"58","1601595273618","allLongestString.py"
+"e","n","","58","1601595273920","allLongestString.py"
+"k","n",,"59","1601595273929","allLongestString.py"
+"e","(","","59","1601595274787","allLongestString.py"
+"k","(",,"60","1601595274787","allLongestString.py"
+"e","(","","84","1601595276392","allLongestString.py"
+"e",")","","85","1601595276396","allLongestString.py"
+"k","(",,"85","1601595276396","allLongestString.py"
+"a","Backspace",,,"1601595277667","allLongestString.py"
+"e","","(","84","1601595277673","allLongestString.py"
+"r",,,,"1601595279545","allLongestString.py"
+"r",,,,"1601595359283","counting unique items.py"
+"a","EditorChange",,,"1601595414905","allLongestString.py"
+"a","EditorChange",,,"1601595415832","allLongestString.py"
+"r",,,,"1601595451928","allLongestString.py"
+"a","Cleanup code",,,"1601595500092","allLongestString.py"
+"a","Cleanup code",,,"1601595500129","allLongestString.py"
+"e","from collections import defaultdict","","224","1601595500145","counting unique items.py"
+"e","
+
+","","262","1601595500151","counting unique items.py"
+"e","from pip._vendor.pep517.compat import FileNotFoundError","","261","1601595500156","counting unique items.py"
+"e","
+","","319","1601595500160","counting unique items.py"
+"e","
+","","224","1601595500164","counting unique items.py"
+"e","","
+","320","1601595500169","counting unique items.py"
+"e","","from pip._vendor.pep517.compat import FileNotFoundError
+from collections import defaultdict
+
+","169","1601595500179","counting unique items.py"
+"a","Cleanup code",,,"1601595500196","allLongestString.py"
+"r",,,,"1601595513406","counting unique items.py"
+"a","Close Active Editor",,,"1601595535806","allLongestString.py"
+"a","Close Active Editor",,,"1601595537079","allLongestString.py"
+"a","Close Active Editor",,,"1601595538394","allLongestString.py"
+"a","Paste",,,"1601598353770","commonCHarCount.py"
+"p","def commonCharacterCount(s1, s2):
+    cnt = 0
+    s1.sort()
+    s2.sort()
+    ",,"0","1601598353888","commonCHarCount.py"
+"e","def commonCharacterCount(s1, s2):
+    cnt = 0
+    s1.sort()
+    s2.sort()
+","","0","1601598353931","commonCHarCount.py"
+"a","Tab",,,"1601598356655","commonCHarCount.py"
+"e","    ","","74","1601598356664","commonCHarCount.py"
+"e","f","","78","1601598357331","commonCHarCount.py"
+"k","f",,"79","1601598357335","commonCHarCount.py"
+"e","o","","79","1601598357561","commonCHarCount.py"
+"k","o",,"80","1601598357566","commonCHarCount.py"
+"e","r","","80","1601598357666","commonCHarCount.py"
+"k","r",,"81","1601598357667","commonCHarCount.py"
+"e"," ","","81","1601598357934","commonCHarCount.py"
+"k"," ",,"82","1601598357938","commonCHarCount.py"
+"e","i","","82","1601598359266","commonCHarCount.py"
+"k","i",,"83","1601598359267","commonCHarCount.py"
+"e"," ","","83","1601598359665","commonCHarCount.py"
+"k"," ",,"84","1601598359666","commonCHarCount.py"
+"e","i","","84","1601598359746","commonCHarCount.py"
+"k","i",,"85","1601598359747","commonCHarCount.py"
+"e","n","","85","1601598360119","commonCHarCount.py"
+"k","n",,"86","1601598360128","commonCHarCount.py"
+"e"," ","","86","1601598360380","commonCHarCount.py"
+"k"," ",,"87","1601598360380","commonCHarCount.py"
+"e","r","","87","1601598363604","commonCHarCount.py"
+"k","r",,"88","1601598363605","commonCHarCount.py"
+"e","a","","88","1601598363843","commonCHarCount.py"
+"k","a",,"89","1601598363856","commonCHarCount.py"
+"e","n","","89","1601598364035","commonCHarCount.py"
+"k","n",,"90","1601598364045","commonCHarCount.py"
+"e","g","","90","1601598364497","commonCHarCount.py"
+"k","g",,"91","1601598364505","commonCHarCount.py"
+"e","e","","91","1601598364706","commonCHarCount.py"
+"k","e",,"92","1601598364714","commonCHarCount.py"
+"e","(","","92","1601598366445","commonCHarCount.py"
+"e",")","","93","1601598366455","commonCHarCount.py"
+"k","(",,"93","1601598366456","commonCHarCount.py"
+"e","l","","93","1601598367448","commonCHarCount.py"
+"k","l",,"94","1601598367449","commonCHarCount.py"
+"e","e","","94","1601598367601","commonCHarCount.py"
+"k","e",,"95","1601598367632","commonCHarCount.py"
+"e","n","","95","1601598367783","commonCHarCount.py"
+"k","n",,"96","1601598367791","commonCHarCount.py"
+"a","Backspace",,,"1601598368786","commonCHarCount.py"
+"e","","n","95","1601598368810","commonCHarCount.py"
+"a","Backspace",,,"1601598368992","commonCHarCount.py"
+"e","","e","94","1601598368999","commonCHarCount.py"
+"a","Backspace",,,"1601598369218","commonCHarCount.py"
+"e","","l","93","1601598369224","commonCHarCount.py"
+"a","Backspace",,,"1601598369434","commonCHarCount.py"
+"e","","(","92","1601598369442","commonCHarCount.py"
+"e","",")","92","1601598369453","commonCHarCount.py"
+"a","Backspace",,,"1601598369619","commonCHarCount.py"
+"e","","e","91","1601598369623","commonCHarCount.py"
+"a","Backspace",,,"1601598369841","commonCHarCount.py"
+"e","","g","90","1601598369845","commonCHarCount.py"
+"a","Backspace",,,"1601598370051","commonCHarCount.py"
+"e","","n","89","1601598370057","commonCHarCount.py"
+"a","Backspace",,,"1601598370276","commonCHarCount.py"
+"e","","a","88","1601598370285","commonCHarCount.py"
+"a","Backspace",,,"1601598370722","commonCHarCount.py"
+"e","","r","87","1601598370726","commonCHarCount.py"
+"e","s","","87","1601598371663","commonCHarCount.py"
+"k","s",,"88","1601598371664","commonCHarCount.py"
+"e","1","","88","1601598372004","commonCHarCount.py"
+"k","1",,"89","1601598372033","commonCHarCount.py"
+"e",":","","89","1601598373263","commonCHarCount.py"
+"k",":",,"90","1601598373265","commonCHarCount.py"
+"a","Enter",,,"1601598373947","commonCHarCount.py"
+"e","
+    ","","90","1601598373992","commonCHarCount.py"
+"e","    ","","95","1601598374018","commonCHarCount.py"
+"e","f","","99","1601598376375","commonCHarCount.py"
+"k","f",,"100","1601598376376","commonCHarCount.py"
+"e","o","","100","1601598376599","commonCHarCount.py"
+"k","o",,"101","1601598376608","commonCHarCount.py"
+"e","r","","101","1601598377564","commonCHarCount.py"
+"k","r",,"102","1601598377570","commonCHarCount.py"
+"e"," ","","102","1601598378143","commonCHarCount.py"
+"k"," ",,"103","1601598378145","commonCHarCount.py"
+"e","j","","103","1601598379264","commonCHarCount.py"
+"k","j",,"104","1601598379265","commonCHarCount.py"
+"e"," ","","104","1601598379560","commonCHarCount.py"
+"k"," ",,"105","1601598379561","commonCHarCount.py"
+"e","i","","105","1601598380121","commonCHarCount.py"
+"k","i",,"106","1601598380122","commonCHarCount.py"
+"e","n","","106","1601598380412","commonCHarCount.py"
+"k","n",,"107","1601598380426","commonCHarCount.py"
+"e"," ","","107","1601598380639","commonCHarCount.py"
+"k"," ",,"108","1601598380639","commonCHarCount.py"
+"e","s","","108","1601598381593","commonCHarCount.py"
+"k","s",,"109","1601598381594","commonCHarCount.py"
+"e","2","","109","1601598382969","commonCHarCount.py"
+"k","2",,"110","1601598382992","commonCHarCount.py"
+"e",":","","110","1601598383560","commonCHarCount.py"
+"k",":",,"111","1601598383561","commonCHarCount.py"
+"a","Enter",,,"1601598383912","commonCHarCount.py"
+"e","
+        ","","111","1601598383919","commonCHarCount.py"
+"e","    ","","120","1601598383935","commonCHarCount.py"
+"e","i","","124","1601598384942","commonCHarCount.py"
+"k","i",,"125","1601598384943","commonCHarCount.py"
+"e","f","","125","1601598385187","commonCHarCount.py"
+"k","f",,"126","1601598385223","commonCHarCount.py"
+"e"," ","","126","1601598385466","commonCHarCount.py"
+"k"," ",,"127","1601598385467","commonCHarCount.py"
+"e","i","","127","1601598386340","commonCHarCount.py"
+"k","i",,"128","1601598386341","commonCHarCount.py"
+"e"," ","","128","1601598386714","commonCHarCount.py"
+"k"," ",,"129","1601598386714","commonCHarCount.py"
+"e","=","","129","1601598386923","commonCHarCount.py"
+"k","=",,"130","1601598386925","commonCHarCount.py"
+"e","=","","130","1601598387113","commonCHarCount.py"
+"k","=",,"131","1601598387114","commonCHarCount.py"
+"e"," ","","131","1601598387356","commonCHarCount.py"
+"k"," ",,"132","1601598387357","commonCHarCount.py"
+"e","j","","132","1601598388139","commonCHarCount.py"
+"k","j",,"133","1601598388140","commonCHarCount.py"
+"e",":","","133","1601598388762","commonCHarCount.py"
+"k",":",,"134","1601598388763","commonCHarCount.py"
+"a","Enter",,,"1601598389052","commonCHarCount.py"
+"e","
+            ","","134","1601598389056","commonCHarCount.py"
+"e","    ","","147","1601598389064","commonCHarCount.py"
+"e","c","","151","1601598413624","commonCHarCount.py"
+"k","c",,"152","1601598413625","commonCHarCount.py"
+"e","n","","152","1601598413907","commonCHarCount.py"
+"k","n",,"153","1601598413913","commonCHarCount.py"
+"e","t","","153","1601598414175","commonCHarCount.py"
+"k","t",,"154","1601598414191","commonCHarCount.py"
+"e"," ","","154","1601598415053","commonCHarCount.py"
+"k"," ",,"155","1601598415054","commonCHarCount.py"
+"e","=","","155","1601598415450","commonCHarCount.py"
+"k","=",,"156","1601598415451","commonCHarCount.py"
+"a","Backspace",,,"1601598415934","commonCHarCount.py"
+"e","","=","155","1601598415937","commonCHarCount.py"
+"e","+","","155","1601598416598","commonCHarCount.py"
+"k","+",,"156","1601598416598","commonCHarCount.py"
+"e","=","","156","1601598417121","commonCHarCount.py"
+"k","=",,"157","1601598417122","commonCHarCount.py"
+"e"," ","","157","1601598417300","commonCHarCount.py"
+"k"," ",,"158","1601598417300","commonCHarCount.py"
+"e","1","","158","1601598417842","commonCHarCount.py"
+"k","1",,"159","1601598417842","commonCHarCount.py"
+"a","Enter",,,"1601598418200","commonCHarCount.py"
+"e","
+                ","","159","1601598418205","commonCHarCount.py"
+"a","Backspace",,,"1601598418702","commonCHarCount.py"
+"e",""," ","175","1601598418709","commonCHarCount.py"
+"e","","   ","172","1601598418714","commonCHarCount.py"
+"a","Backspace",,,"1601598419130","commonCHarCount.py"
+"e",""," ","171","1601598419134","commonCHarCount.py"
+"e","","   ","168","1601598419138","commonCHarCount.py"
+"a","Backspace",,,"1601598419790","commonCHarCount.py"
+"e",""," ","167","1601598419794","commonCHarCount.py"
+"e","","   ","164","1601598419798","commonCHarCount.py"
+"e","r","","164","1601598420812","commonCHarCount.py"
+"k","r",,"165","1601598420813","commonCHarCount.py"
+"e","e","","165","1601598421006","commonCHarCount.py"
+"k","e",,"166","1601598421014","commonCHarCount.py"
+"e","t","","166","1601598421255","commonCHarCount.py"
+"k","t",,"167","1601598421263","commonCHarCount.py"
+"e","u","","167","1601598421471","commonCHarCount.py"
+"k","u",,"168","1601598421478","commonCHarCount.py"
+"e","r","","168","1601598421571","commonCHarCount.py"
+"k","r",,"169","1601598421574","commonCHarCount.py"
+"e","n","","169","1601598421757","commonCHarCount.py"
+"k","n",,"170","1601598421771","commonCHarCount.py"
+"e"," ","","170","1601598422010","commonCHarCount.py"
+"k"," ",,"171","1601598422010","commonCHarCount.py"
+"e","c","","171","1601598423088","commonCHarCount.py"
+"k","c",,"172","1601598423089","commonCHarCount.py"
+"e","n","","172","1601598423305","commonCHarCount.py"
+"k","n",,"173","1601598423314","commonCHarCount.py"
+"e","t","","173","1601598423457","commonCHarCount.py"
+"k","t",,"174","1601598423471","commonCHarCount.py"
+"a","Enter",,,"1601598425545","commonCHarCount.py"
+"e","
+    ","","174","1601598425552","commonCHarCount.py"
+"e","","    ","175","1601598425561","commonCHarCount.py"
+"a","Enter",,,"1601598427269","commonCHarCount.py"
+"e","
+","","175","1601598427275","commonCHarCount.py"
+"a","Enter",,,"1601598428462","commonCHarCount.py"
+"e","
+","","176","1601598428469","commonCHarCount.py"
+"e","p","","177","1601598429949","commonCHarCount.py"
+"k","p",,"178","1601598429950","commonCHarCount.py"
+"e","r","","178","1601598430068","commonCHarCount.py"
+"k","r",,"179","1601598430078","commonCHarCount.py"
+"a","Choose Lookup Item",,,"1601598430664","commonCHarCount.py"
+"e","int","","179","1601598430685","commonCHarCount.py"
+"e"," ","","182","1601598430707","commonCHarCount.py"
+"a","Backspace",,,"1601598432063","commonCHarCount.py"
+"e",""," ","182","1601598432069","commonCHarCount.py"
+"e","(","","182","1601598433862","commonCHarCount.py"
+"e",")","","183","1601598433868","commonCHarCount.py"
+"k","(",,"183","1601598433868","commonCHarCount.py"
+"e","c","","183","1601598436295","commonCHarCount.py"
+"k","c",,"184","1601598436296","commonCHarCount.py"
+"e","o","","184","1601598436558","commonCHarCount.py"
+"k","o",,"185","1601598436567","commonCHarCount.py"
+"a","Choose Lookup Item",,,"1601598437252","commonCHarCount.py"
+"e","mmonCharacterCount","","185","1601598437263","commonCHarCount.py"
+"e","(","","203","1601598437290","commonCHarCount.py"
+"e",")","","205","1601598437294","commonCHarCount.py"
+"a","Paste",,,"1601598457128","commonCHarCount.py"
+"p","""aabcc""",,"204","1601598457140","commonCHarCount.py"
+"e","""aabcc""","","204","1601598457150","commonCHarCount.py"
+"e",",","","211","1601598458628","commonCHarCount.py"
+"k",",",,"212","1601598458629","commonCHarCount.py"
+"a","Paste",,,"1601598468001","commonCHarCount.py"
+"p","""adcaa""",,"212","1601598468009","commonCHarCount.py"
+"e","""adcaa""","","212","1601598468017","commonCHarCount.py"
+"e"," ","","212","1601598473252","commonCHarCount.py"
+"k"," ",,"213","1601598473253","commonCHarCount.py"
+"a","Backspace",,,"1601598482403","commonCHarCount.py"
+"e","",")","58","1601598482408","commonCHarCount.py"
+"a","Backspace",,,"1601598482982","commonCHarCount.py"
+"e","","(","57","1601598482986","commonCHarCount.py"
+"a","Backspace",,,"1601598483082","commonCHarCount.py"
+"e","","t","56","1601598483086","commonCHarCount.py"
+"a","Backspace",,,"1601598483182","commonCHarCount.py"
+"e","","r","55","1601598483186","commonCHarCount.py"
+"a","Backspace",,,"1601598483456","commonCHarCount.py"
+"e","","o","54","1601598483459","commonCHarCount.py"
+"a","Backspace",,,"1601598483695","commonCHarCount.py"
+"e","","s","53","1601598483701","commonCHarCount.py"
+"a","Backspace",,,"1601598484115","commonCHarCount.py"
+"e","",".","52","1601598484118","commonCHarCount.py"
+"a","Backspace",,,"1601598484615","commonCHarCount.py"
+"e","","1","51","1601598484620","commonCHarCount.py"
+"a","Backspace",,,"1601598484830","commonCHarCount.py"
+"e","","s","50","1601598484837","commonCHarCount.py"
+"e","s","","50","1601598486765","commonCHarCount.py"
+"k","s",,"51","1601598486766","commonCHarCount.py"
+"e","1","","51","1601598487042","commonCHarCount.py"
+"k","1",,"52","1601598487080","commonCHarCount.py"
+"e"," ","","52","1601598487304","commonCHarCount.py"
+"k"," ",,"53","1601598487305","commonCHarCount.py"
+"e","=","","53","1601598488569","commonCHarCount.py"
+"k","=",,"54","1601598488569","commonCHarCount.py"
+"e"," ","","54","1601598488729","commonCHarCount.py"
+"k"," ",,"55","1601598488730","commonCHarCount.py"
+"e","s","","55","1601598488970","commonCHarCount.py"
+"k","s",,"56","1601598488971","commonCHarCount.py"
+"e","o","","56","1601598489155","commonCHarCount.py"
+"k","o",,"57","1601598489166","commonCHarCount.py"
+"e","r","","57","1601598489459","commonCHarCount.py"
+"k","r",,"58","1601598489462","commonCHarCount.py"
+"e","t","","58","1601598489684","commonCHarCount.py"
+"k","t",,"59","1601598489688","commonCHarCount.py"
+"e","e","","59","1601598489813","commonCHarCount.py"
+"k","e",,"60","1601598489817","commonCHarCount.py"
+"a","Choose Lookup Item",,,"1601598490696","commonCHarCount.py"
+"e","d","","60","1601598490710","commonCHarCount.py"
+"e","(","","61","1601598490733","commonCHarCount.py"
+"e",")","","62","1601598490737","commonCHarCount.py"
+"e","s","","62","1601598492262","commonCHarCount.py"
+"k","s",,"63","1601598492263","commonCHarCount.py"
+"e","1","","63","1601598492575","commonCHarCount.py"
+"k","1",,"64","1601598492600","commonCHarCount.py"
+"a","Down",,,"1601598493917","commonCHarCount.py"
+"a","Backspace",,,"1601598495170","commonCHarCount.py"
+"e","",")","78","1601598495177","commonCHarCount.py"
+"a","Backspace",,,"1601598495519","commonCHarCount.py"
+"e","","(","77","1601598495524","commonCHarCount.py"
+"a","Backspace",,,"1601598495681","commonCHarCount.py"
+"e","","t","76","1601598495686","commonCHarCount.py"
+"a","Backspace",,,"1601598495906","commonCHarCount.py"
+"e","","r","75","1601598495915","commonCHarCount.py"
+"a","Backspace",,,"1601598496061","commonCHarCount.py"
+"e","","o","74","1601598496067","commonCHarCount.py"
+"a","Backspace",,,"1601598496286","commonCHarCount.py"
+"e","","s","73","1601598496292","commonCHarCount.py"
+"a","Backspace",,,"1601598496461","commonCHarCount.py"
+"e","",".","72","1601598496467","commonCHarCount.py"
+"a","Backspace",,,"1601598496673","commonCHarCount.py"
+"e","","2","71","1601598496678","commonCHarCount.py"
+"a","Backspace",,,"1601598496852","commonCHarCount.py"
+"e","","s","70","1601598496855","commonCHarCount.py"
+"e","s","","70","1601598497476","commonCHarCount.py"
+"k","s",,"71","1601598497477","commonCHarCount.py"
+"e","2","","71","1601598497809","commonCHarCount.py"
+"k","2",,"72","1601598497839","commonCHarCount.py"
+"e"," ","","72","1601598498125","commonCHarCount.py"
+"k"," ",,"73","1601598498126","commonCHarCount.py"
+"e","=","","73","1601598498828","commonCHarCount.py"
+"k","=",,"74","1601598498829","commonCHarCount.py"
+"e"," ","","74","1601598498957","commonCHarCount.py"
+"k"," ",,"75","1601598498958","commonCHarCount.py"
+"e","s","","75","1601598499352","commonCHarCount.py"
+"k","s",,"76","1601598499353","commonCHarCount.py"
+"e","o","","76","1601598499688","commonCHarCount.py"
+"k","o",,"77","1601598499696","commonCHarCount.py"
+"e","r","","77","1601598499987","commonCHarCount.py"
+"k","r",,"78","1601598499991","commonCHarCount.py"
+"e","t","","78","1601598500330","commonCHarCount.py"
+"k","t",,"79","1601598500333","commonCHarCount.py"
+"a","Choose Lookup Item",,,"1601598500961","commonCHarCount.py"
+"e","ed","","79","1601598500973","commonCHarCount.py"
+"e","(","","81","1601598500995","commonCHarCount.py"
+"e",")","","82","1601598500999","commonCHarCount.py"
+"e","s","","82","1601598502261","commonCHarCount.py"
+"k","s",,"83","1601598502262","commonCHarCount.py"
+"e","2","","83","1601598502565","commonCHarCount.py"
+"k","2",,"84","1601598502610","commonCHarCount.py"
+"a","Backspace",,,"1601598507085","commonCHarCount.py"
+"e","","1","51","1601598507091","commonCHarCount.py"
+"e","3","","51","1601598507343","commonCHarCount.py"
+"k","3",,"52","1601598507343","commonCHarCount.py"
+"a","Down",,,"1601598507873","commonCHarCount.py"
+"a","Backspace",,,"1601598508701","commonCHarCount.py"
+"e","","2","71","1601598508706","commonCHarCount.py"
+"e","4","","71","1601598509547","commonCHarCount.py"
+"k","4",,"72","1601598509548","commonCHarCount.py"
+"a","Backspace",,,"1601598512481","commonCHarCount.py"
+"e","","1","100","1601598512486","commonCHarCount.py"
+"e","3","","100","1601598512832","commonCHarCount.py"
+"k","3",,"101","1601598512833","commonCHarCount.py"
+"a","Down",,,"1601598513250","commonCHarCount.py"
+"a","Right",,,"1601598513676","commonCHarCount.py"
+"a","Right",,,"1601598513866","commonCHarCount.py"
+"a","Right",,,"1601598514047","commonCHarCount.py"
+"a","Right",,,"1601598514281","commonCHarCount.py"
+"a","Backspace",,,"1601598514877","commonCHarCount.py"
+"e","","2","121","1601598514883","commonCHarCount.py"
+"e","4","","121","1601598515182","commonCHarCount.py"
+"k","4",,"122","1601598515183","commonCHarCount.py"
+"r",,,,"1601598518467","counting unique items.py"
+"r",,,,"1601598554550","commonCHarCount.py"
+"r",,,,"1601598556210","commonCHarCount.py"
+"a","Backspace",,,"1601598574193","commonCHarCount.py"
+"e","","for j in s4:
+            if i == j:
+                cnt += 1","111","1601598574201","commonCHarCount.py"
+"a","Enter",,,"1601598582690","commonCHarCount.py"
+"e","    
+","","86","1601598582694","commonCHarCount.py"
+"e","p","","90","1601598583633","commonCHarCount.py"
+"k","p",,"91","1601598583634","commonCHarCount.py"
+"e","r","","91","1601598583805","commonCHarCount.py"
+"k","r",,"92","1601598583813","commonCHarCount.py"
+"a","Choose Lookup Item",,,"1601598584351","commonCHarCount.py"
+"e","int","","92","1601598584361","commonCHarCount.py"
+"e"," ","","95","1601598584392","commonCHarCount.py"
+"e","(","","96","1601598585644","commonCHarCount.py"
+"e",")","","97","1601598585649","commonCHarCount.py"
+"k","(",,"97","1601598585650","commonCHarCount.py"
+"a","Backspace",,,"1601598586485","commonCHarCount.py"
+"e","","(","96","1601598586492","commonCHarCount.py"
+"e","",")","96","1601598586496","commonCHarCount.py"
+"a","Backspace",,,"1601598586673","commonCHarCount.py"
+"e",""," ","95","1601598586678","commonCHarCount.py"
+"e","(","","95","1601598587539","commonCHarCount.py"
+"e",")","","96","1601598587544","commonCHarCount.py"
+"k","(",,"96","1601598587544","commonCHarCount.py"
+"e","s","","96","1601598588854","commonCHarCount.py"
+"k","s",,"97","1601598588854","commonCHarCount.py"
+"e","3","","97","1601598589199","commonCHarCount.py"
+"k","3",,"98","1601598589232","commonCHarCount.py"
+"e",",","","98","1601598589549","commonCHarCount.py"
+"k",",",,"99","1601598589549","commonCHarCount.py"
+"e"," ","","99","1601598589683","commonCHarCount.py"
+"k"," ",,"100","1601598589684","commonCHarCount.py"
+"e","s","","100","1601598590059","commonCHarCount.py"
+"k","s",,"101","1601598590060","commonCHarCount.py"
+"e","4","","101","1601598590372","commonCHarCount.py"
+"k","4",,"102","1601598590399","commonCHarCount.py"
+"r",,,,"1601598592777","commonCHarCount.py"
+"e","p","","129","1601598603837","commonCHarCount.py"
+"k","p",,"130","1601598603838","commonCHarCount.py"
+"e","a","","130","1601598604461","commonCHarCount.py"
+"k","a",,"131","1601598604472","commonCHarCount.py"
+"a","Choose Lookup Item",,,"1601598605907","commonCHarCount.py"
+"e","ss","","131","1601598605915","commonCHarCount.py"
+"r",,,,"1601598607841","commonCHarCount.py"
+"a","Enter",,,"1601598637129","commonCHarCount.py"
+"e","    
+","","86","1601598637136","commonCHarCount.py"
+"a","Up",,,"1601598644699","commonCHarCount.py"
+"a","Up",,,"1601598644896","commonCHarCount.py"
+"a","Backspace",,,"1601598663082","commonCHarCount.py"
+"e","","s","137","1601598663088","commonCHarCount.py"
+"a","Backspace",,,"1601598663306","commonCHarCount.py"
+"e","","s","136","1601598663314","commonCHarCount.py"
+"a","Backspace",,,"1601598663570","commonCHarCount.py"
+"e","","a","135","1601598663574","commonCHarCount.py"
+"a","Backspace",,,"1601598664040","commonCHarCount.py"
+"e","","p","134","1601598664044","commonCHarCount.py"
+"e","i","","134","1601598665412","commonCHarCount.py"
+"k","i",,"135","1601598665413","commonCHarCount.py"
+"e","f","","135","1601598665580","commonCHarCount.py"
+"k","f",,"136","1601598665610","commonCHarCount.py"
+"e"," ","","136","1601598665892","commonCHarCount.py"
+"k"," ",,"137","1601598665893","commonCHarCount.py"
+"a","Backspace",,,"1601598667601","commonCHarCount.py"
+"e",""," ","136","1601598667607","commonCHarCount.py"
+"a","Backspace",,,"1601598667842","commonCHarCount.py"
+"e","","f","135","1601598667847","commonCHarCount.py"
+"a","Backspace",,,"1601598668048","commonCHarCount.py"
+"e","","i","134","1601598668053","commonCHarCount.py"
+"a","Backspace",,,"1601598670682","commonCHarCount.py"
+"e",""," ","133","1601598670687","commonCHarCount.py"
+"e","","   ","130","1601598670690","commonCHarCount.py"
+"a","Backspace",,,"1601598671064","commonCHarCount.py"
+"e",""," ","129","1601598671067","commonCHarCount.py"
+"e","","   ","126","1601598671071","commonCHarCount.py"
+"a","Backspace",,,"1601598671301","commonCHarCount.py"
+"e","","
+","126","1601598671305","commonCHarCount.py"
+"a","Backspace",,,"1601598671654","commonCHarCount.py"
+"e","",":","124","1601598671659","commonCHarCount.py"
+"a","Backspace",,,"1601598673406","commonCHarCount.py"
+"e","","3","123","1601598673410","commonCHarCount.py"
+"a","Backspace",,,"1601598677236","commonCHarCount.py"
+"e","","    
+    print(s3, s4)
+    for i in s
+    return cnt","86","1601598677243","commonCHarCount.py"
+"a","Backspace",,,"1601598677512","commonCHarCount.py"
+"e","","
+","88","1601598677518","commonCHarCount.py"
+"a","Backspace",,,"1601598679128","commonCHarCount.py"
+"e","","def commonCharacterCount(s1, s2):
+    cnt = 0
+    s3 = sorted(s1)
+    s4 = sorted(s2)
+
+
+print(commonCharacterCount(""aabcc"", ""adcaa""))","0","1601598679132","commonCHarCount.py"
+"a","Backspace",,,"1601598679452","commonCHarCount.py"

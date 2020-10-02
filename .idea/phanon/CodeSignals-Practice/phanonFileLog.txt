@@ -1,0 +1,142 @@
+/Users/nikhilkalyan/PycharmProjects/SSW 810/workspace.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/HW08_nikhil_kalyan.py
+/Applications/PyCharm.app/Contents/plugins/python/helpers/typeshed/stdlib/2and3/datetime.pyi
+/Users/nikhilkalyan/PycharmProjects/SSW 810/Practice.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/Student_major
+/Users/nikhilkalyan/PycharmProjects/SSW 540/p8.py
+/Users/nikhilkalyan/PycharmProjects/SSW 540/p8-nkalyan.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/HW08_Test_nikhil_kalyan.py
+/Users/nikhilkalyan/PycharmProjects/SSW HW08/Testfile.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/HW09_nikhil_kalyan.pyi
+/Users/nikhilkalyan/PycharmProjects/SSW 810/HW09_Test_nikhil_kalyan.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/students.txt
+/Users/nikhilkalyan/PycharmProjects/SSW 810/HW09_Nikhil_Kalyan.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/workspace.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/HW08_nikhil_kalyan.py
+/Applications/PyCharm.app/Contents/plugins/python/helpers/typeshed/stdlib/2and3/datetime.pyi
+/Users/nikhilkalyan/PycharmProjects/SSW 810/Practice.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/Student_major
+/Users/nikhilkalyan/PycharmProjects/SSW 540/p8.py
+/Users/nikhilkalyan/PycharmProjects/SSW 540/p8-nkalyan.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/HW08_Test_nikhil_kalyan.py
+/Users/nikhilkalyan/PycharmProjects/SSW HW08/Testfile.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/HW09_nikhil_kalyan.pyi
+/Users/nikhilkalyan/PycharmProjects/SSW 810/HW09_Test_nikhil_kalyan.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/students.txt
+/Users/nikhilkalyan/PycharmProjects/SSW 810/HW09_Nikhil_Kalyan.py
+/Users/nikhilkalyan/PycharmProjects/SSW 540/p9-nkalyan.py
+/Users/nikhilkalyan/PycharmProjects/SSW 540/TomSawyer.txt
+/Users/nikhilkalyan/PycharmProjects/SSW 810/instructors.txt
+/Users/nikhilkalyan/PycharmProjects/SSW 810/HW10_nikhil_kalyan.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/majors.txt.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/majors.txt
+/Users/nikhilkalyan/PycharmProjects/SSW 810/HW10_Test_nikhil_kalyan.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/HW11_nikhil_kalyan.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/HW11_Test_nikhil_kalyan.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/grades.txt
+/Users/nikhilkalyan/PycharmProjects/SSW 810/Majors.txt
+/Users/nikhilkalyan/PycharmProjects/SSW 810/instructor.txt
+/Users/nikhilkalyan/PycharmProjects/SSW 810/Grades.txt
+/Users/nikhilkalyan/PycharmProjects/SSW 810/Student_repository_nikhil_kalyan.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/Student_repository_Test_nikhil_kalyan.py
+/Users/nikhilkalyan/PycharmProjects/SSW 540/p11-nkalyan.py
+/Users/nikhilkalyan/PycharmProjects/SSW 540/p12-nkalyan.py
+/Users/nikhilkalyan/PycharmProjects/SSW 540/p12.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/HW12-nikhil_kalyan.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/student_courses.html
+/Users/nikhilkalyan/PycharmProjects/SSW 810/base.html
+/Users/nikhilkalyan/PycharmProjects/SSW 810/templates/HW12-nikhil_kalyan.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/templates/student_courses.html
+/Users/nikhilkalyan/PycharmProjects/SSW 810/templates/base.html
+/Users/nikhilkalyan/PycharmProjects/SSW 810/template/HW12-nikhil_kalyan.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/HW12_nikhil_kalyan/base.html
+/Users/nikhilkalyan/PycharmProjects/SSW 810/HW12_nikhil_kalyan/student_courses.html
+/Users/nikhilkalyan/PycharmProjects/SSW 810/HW12_nikhil_kalyan/templates/base.html
+/Users/nikhilkalyan/PycharmProjects/SSW 810/HW12_nikhil_kalyan/templates/student_courses.html
+/Users/nikhilkalyan/PycharmProjects/SSW 810/HW12_nikhil_kalyan/templates/HW12_nikhil_kalyan_web.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/HW12_nikhil_kalyan/HW12_nikhil_kalyan_web.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/HW12_nikhil_kalyan/__init__.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/HW12_nikhil_kalyan/app.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/workspace.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/HW08_nikhil_kalyan.py
+/Applications/PyCharm.app/Contents/plugins/python/helpers/typeshed/stdlib/2and3/datetime.pyi
+/Users/nikhilkalyan/PycharmProjects/SSW 810/Practice.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/Student_major
+/Users/nikhilkalyan/PycharmProjects/SSW 540/p8.py
+/Users/nikhilkalyan/PycharmProjects/SSW 540/p8-nkalyan.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/HW08_Test_nikhil_kalyan.py
+/Users/nikhilkalyan/PycharmProjects/SSW HW08/Testfile.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/HW09_nikhil_kalyan.pyi
+/Users/nikhilkalyan/PycharmProjects/SSW 810/HW09_Test_nikhil_kalyan.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/students.txt
+/Users/nikhilkalyan/PycharmProjects/SSW 810/HW09_Nikhil_Kalyan.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/workspace.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/HW08_nikhil_kalyan.py
+/Applications/PyCharm.app/Contents/plugins/python/helpers/typeshed/stdlib/2and3/datetime.pyi
+/Users/nikhilkalyan/PycharmProjects/SSW 810/Practice.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/Student_major
+/Users/nikhilkalyan/PycharmProjects/SSW 540/p8.py
+/Users/nikhilkalyan/PycharmProjects/SSW 540/p8-nkalyan.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/HW08_Test_nikhil_kalyan.py
+/Users/nikhilkalyan/PycharmProjects/SSW HW08/Testfile.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/HW09_nikhil_kalyan.pyi
+/Users/nikhilkalyan/PycharmProjects/SSW 810/HW09_Test_nikhil_kalyan.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/students.txt
+/Users/nikhilkalyan/PycharmProjects/SSW 810/HW09_Nikhil_Kalyan.py
+/Users/nikhilkalyan/PycharmProjects/SSW 540/p9-nkalyan.py
+/Users/nikhilkalyan/PycharmProjects/SSW 540/TomSawyer.txt
+/Users/nikhilkalyan/PycharmProjects/SSW 810/instructors.txt
+/Users/nikhilkalyan/PycharmProjects/SSW 810/HW10_nikhil_kalyan.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/majors.txt.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/majors.txt
+/Users/nikhilkalyan/PycharmProjects/SSW 810/HW10_Test_nikhil_kalyan.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/HW11_nikhil_kalyan.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/HW11_Test_nikhil_kalyan.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/grades.txt
+/Users/nikhilkalyan/PycharmProjects/SSW 810/Majors.txt
+/Users/nikhilkalyan/PycharmProjects/SSW 810/instructor.txt
+/Users/nikhilkalyan/PycharmProjects/SSW 810/Grades.txt
+/Users/nikhilkalyan/PycharmProjects/SSW 810/Student_repository_nikhil_kalyan.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/Student_repository_Test_nikhil_kalyan.py
+/Users/nikhilkalyan/PycharmProjects/SSW 540/p11-nkalyan.py
+/Users/nikhilkalyan/PycharmProjects/SSW 540/p12-nkalyan.py
+/Users/nikhilkalyan/PycharmProjects/SSW 540/p12.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/HW12-nikhil_kalyan.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/student_courses.html
+/Users/nikhilkalyan/PycharmProjects/SSW 810/base.html
+/Users/nikhilkalyan/PycharmProjects/SSW 810/templates/HW12-nikhil_kalyan.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/templates/student_courses.html
+/Users/nikhilkalyan/PycharmProjects/SSW 810/templates/base.html
+/Users/nikhilkalyan/PycharmProjects/SSW 810/template/HW12-nikhil_kalyan.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/HW12_nikhil_kalyan/base.html
+/Users/nikhilkalyan/PycharmProjects/SSW 810/HW12_nikhil_kalyan/student_courses.html
+/Users/nikhilkalyan/PycharmProjects/SSW 810/HW12_nikhil_kalyan/templates/base.html
+/Users/nikhilkalyan/PycharmProjects/SSW 810/HW12_nikhil_kalyan/templates/student_courses.html
+/Users/nikhilkalyan/PycharmProjects/SSW 810/HW12_nikhil_kalyan/templates/HW12_nikhil_kalyan_web.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/HW12_nikhil_kalyan/HW12_nikhil_kalyan_web.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/HW12_nikhil_kalyan/__init__.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/HW12_nikhil_kalyan/app.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/venv/lib/python3.8/site-packages/flask/HW12_nikhil_kalyan/HW12_nikhil_kalyan_web.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/venv/lib/python3.8/site-packages/flask/HW12_nikhil_kalyan_flask.py
+/Users/nikhilkalyan/HW12/Stevens_Repository_Web.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/HW12/Stevens_Repository_Web.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/HW12/HW12_nikhil_kalyan.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/HW12/workspace.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/HW12/test.txt
+/Users/nikhilkalyan/PycharmProjects/SSW 810/HW12/space.py
+/Users/nikhilkalyan/PycharmProjects/SSW 540/p13-nkalyan.py
+/Users/nikhilkalyan/PycharmProjects/SSW 810/regex.py
+/Users/nikhilkalyan/PycharmProjects/SSW 540/slicing and dicing files.py
+/Users/nikhilkalyan/PycharmProjects/SSW 540/throtting citadel
+/Users/nikhilkalyan/PycharmProjects/SSW 540/can you make polindrome.py
+/Users/nikhilkalyan/PycharmProjects/SSW 540/throttling gateway.py
+/Users/nikhilkalyan/PycharmProjects/SSW 540/consecutivesum.py
+/Users/nikhilkalyan/PycharmProjects/SSW 540/citadel LC shares
+/Users/nikhilkalyan/PycharmProjects/SSW 540/IPO LC.py
+/Users/nikhilkalyan/PycharmProjects/SSW 540/matrixsumm.py
+/Users/nikhilkalyan/CodeSignals-Practice/.idea/.gitignore
+/Users/nikhilkalyan/CodeSignals-Practice/slicing and dicing files.py
+/Users/nikhilkalyan/CodeSignals-Practice/allLongestString.py
+/Users/nikhilkalyan/CodeSignals-Practice/IPO LC.py
+/Users/nikhilkalyan/CodeSignals-Practice/counting unique items.py
+/Users/nikhilkalyan/CodeSignals-Practice/commonCHarCount.py
