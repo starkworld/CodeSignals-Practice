@@ -34,3 +34,23 @@ Process finished with exit code 1
 "o","17",,"
 Process finished with exit code 2
 ",,"system","1601595434794",
+"r","21","""/Users/nikhilkalyan/PycharmProjects/SSW 810/venv/bin/python"" ""/Users/nikhilkalyan/CodeSignals-Practice/throttling gateway.py""",,"PythonRunner",,"1601672931938","unmarked.txt"
+"o","21",,"20 7
+",,"stdout","1601672932635",
+"o","21",,"21 8
+",,"stdout","1601672932635",
+"o","21",,"22 8
+",,"stdout","1601672932635",
+"o","21",,"23 8
+",,"stdout","1601672932635",
+"o","21",,"24 9
+",,"stdout","1601672932635",
+"o","21",,"25 9
+",,"stdout","1601672932635",
+"o","21",,"26 9
+",,"stdout","1601672932635",
+"o","21",,"7
+",,"stdout","1601672932635",
+"o","21",,"
+Process finished with exit code 0
+",,"system","1601672932678",

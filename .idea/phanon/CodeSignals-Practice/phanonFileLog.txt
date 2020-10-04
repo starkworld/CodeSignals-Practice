@@ -140,3 +140,6 @@
 /Users/nikhilkalyan/CodeSignals-Practice/IPO LC.py
 /Users/nikhilkalyan/CodeSignals-Practice/counting unique items.py
 /Users/nikhilkalyan/CodeSignals-Practice/commonCHarCount.py
+/Users/nikhilkalyan/CodeSignals-Practice/isLucky.py
+/Users/nikhilkalyan/CodeSignals-Practice/sortbyHeights.py
+/Users/nikhilkalyan/CodeSignals-Practice/beforeToAfterMatrix.py
