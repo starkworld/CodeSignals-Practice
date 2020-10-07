@@ -143,3 +143,7 @@
 /Users/nikhilkalyan/CodeSignals-Practice/isLucky.py
 /Users/nikhilkalyan/CodeSignals-Practice/sortbyHeights.py
 /Users/nikhilkalyan/CodeSignals-Practice/beforeToAfterMatrix.py
+/Users/nikhilkalyan/CodeSignals-Practice/sortByHeights.py
+/Users/nikhilkalyan/CodeSignals-Practice/reverseInParanthesis.py
+/Users/nikhilkalyan/CodeSignals-Practice/AlteringSum.py
+/Users/nikhilkalyan/Library/Application Support/JetBrains/PyCharm2020.2/pycharm.vmoptions

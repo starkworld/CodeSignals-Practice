@@ -292,3 +292,55 @@ Process finished with exit code 0
 "o","20",,"
 Process finished with exit code 0
 ",,"system","1601666819782",
+"r","3","""/Users/nikhilkalyan/PycharmProjects/SSW 810/venv/bin/python"" /Users/nikhilkalyan/CodeSignals-Practice/reverseInParanthesis.py",,"PythonRunner",,"1601843553194","reverseInParanthesis.py"
+"o","3",,"['()']
+",,"stdout","1601843554207",
+"o","3",,"
+Process finished with exit code 0
+",,"system","1601843554245",
+"r","4","""/Users/nikhilkalyan/PycharmProjects/SSW 810/venv/bin/python"" /Users/nikhilkalyan/CodeSignals-Practice/reverseInParanthesis.py",,"PythonRunner",,"1601843562421","reverseInParanthesis.py"
+"o","4",,"['(']
+",,"stdout","1601843562824",
+"o","4",,"
+Process finished with exit code 0
+",,"system","1601843562860",
+"r","5","""/Users/nikhilkalyan/PycharmProjects/SSW 810/venv/bin/python"" /Users/nikhilkalyan/CodeSignals-Practice/reverseInParanthesis.py",,"PythonRunner",,"1601843602315","reverseInParanthesis.py"
+"o","5",,"['foo(bar)baz']
+",,"stdout","1601843602696",
+"o","5",,"
+Process finished with exit code 0
+",,"system","1601843602738",
+"r","6","""/Users/nikhilkalyan/PycharmProjects/SSW 810/venv/bin/python"" /Users/nikhilkalyan/CodeSignals-Practice/reverseInParanthesis.py",,"PythonRunner",,"1601843607794","reverseInParanthesis.py"
+"o","6",,"['foo', 'bar)baz']
+",,"stdout","1601843608159",
+"o","6",,"
+Process finished with exit code 0
+",,"system","1601843608214",
+"r","7","""/Users/nikhilkalyan/PycharmProjects/SSW 810/venv/bin/python"" /Users/nikhilkalyan/CodeSignals-Practice/reverseInParanthesis.py",,"PythonRunner",,"1601843632802","reverseInParanthesis.py"
+"o","7",,"Traceback (most recent call last):
+",,"stderr","1601843633166",
+"o","7",,"  File ""/Users/nikhilkalyan/CodeSignals-Practice/reverseInParanthesis.py"", line 6, in <module>
+",,"stderr","1601843633166",
+"o","7",,"    reverseInParentheses(""foo(bar)baz"")
+",,"stderr","1601843633166",
+"o","7",,"  File ""/Users/nikhilkalyan/CodeSignals-Practice/reverseInParanthesis.py"", line 2, in reverseInParentheses
+",,"stderr","1601843633166",
+"o","7",,"    a = inputString.split('(',')')
+",,"stderr","1601843633166",
+"o","7",,"TypeError: 'str' object cannot be interpreted as an integer
+",,"stderr","1601843633166",
+"o","7",,"
+Process finished with exit code 1
+",,"system","1601843633205",
+"r","8","""/Users/nikhilkalyan/PycharmProjects/SSW 810/venv/bin/python"" /Users/nikhilkalyan/CodeSignals-Practice/reverseInParanthesis.py",,"PythonRunner",,"1601843649108","reverseInParanthesis.py"
+"o","8",,"['foo(bar)baz']
+",,"stdout","1601843649492",
+"o","8",,"
+Process finished with exit code 0
+",,"system","1601843649530",
+"r","9","""/Users/nikhilkalyan/PycharmProjects/SSW 810/venv/bin/python"" /Users/nikhilkalyan/CodeSignals-Practice/reverseInParanthesis.py",,"PythonRunner",,"1601843975210","reverseInParanthesis.py"
+"o","9",,"foorabbazmilb
+",,"stdout","1601843975847",
+"o","9",,"
+Process finished with exit code 0
+",,"system","1601843975901",
