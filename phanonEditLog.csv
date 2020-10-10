@@ -1,0 +1,829 @@
+"a","Backspace",,,"1601700848720","sortbyHeights.py"
+"e","d","","0","1601700848783","sortbyHeights.py"
+"a","Backspace",,,"1601700848971","sortbyHeights.py"
+"e","","d","0","1601700848988","sortbyHeights.py"
+"a","Paste",,,"1601700849870","sortbyHeights.py"
+"p","def test_checkForOldParents(self):
+        """"""Test cases for checking parents are old or not US12""""""
+        f = open(""Output.txt"", ""a+"")
+        fam: Dict = {'F23':
+                   {'fam': 'F23', 'MARR': '14 FEB 1980', 'HUSB': 'I01', 'WIFE': 'I07', 'CHIL': ['I19', 'I26', 'I30']},
+               'F16': {'fam': 'F16', 'MARR': '12 DEC 2007'}}
+        fam2: Dict = {'F23': {'fam': 'F23', 'MARR': '14 FEB 1980', 'HUSB': 'I01', 'WIFE': 'I07', 'CHIL': ['I19']}}
+
+        ind1: Dict = {'I01': {'id': 'I01', 'name': 'Joe /Smith/', 'BIRT': '15 JUL 1900', 'sex': 'M', 'family': 'F23',
+                        'DEAT': '31 DEC 2013'},
+                'I07': {'id': 'I07', 'name': 'Jennifer /Smith/', 'BIRT': '23 SEP 1902', 'sex': 'F', 'family': 'F23',
+                        'DEAT': '31 DEC 2013'},
+                'I19': {'id': 'I19', 'name': 'Dick /Smith/', 'BIRT': '13 FEB 1999', 'sex': 'M', 'family': 'F23',
+                        'DEAT': '31 DEC 2013'}}
+
+        ind2: Dict = {'I01': {'id': 'I01', 'name': 'Joe /Smith/', 'BIRT': '15 JUL 1960', 'sex': 'M', 'family': 'F23',
+                         'DEAT': '31 DEC 2013'},
+                 'I07': {'id': 'I07', 'name': 'Jennifer /Smith/', 'BIRT': '23 SEP 1960', 'sex': 'F', 'family': 'F23'},
+                 'I19': {'id': 'I19', 'name': 'Dick /Smith/', 'BIRT': '13 FEB 1981', 'sex': 'M', 'family': 'F23'},
+                 'I26': {'id': 'I26', 'name': 'Jane /Smith/', 'BIRT': '13 FEB 1981', 'sex': 'F', 'family': 'F23'},
+                 'I30': {'id': 'I30', 'name': 'Mary /Test/', 'BIRT': '13 FEB 1981', 'sex': 'F', 'family': 'F23'},
+                 'I32': {'id': 'I32', 'name': 'Nick /Tary/', 'BIRT': '13 FEB 1981', 'sex': 'M', 'family': 'F23'},
+                 'I44': {'id': 'I44', 'name': 'Cersi /Lanister/', 'BIRT': '13 FEB 1981', 'sex': 'F', 'family': 'F23'}}
+        
+        self.assertTrue(us.checkForOldParents(fam, ind2, f))
+        self.assertFalse(us.checkForOldParents(fam2, ind1, f))",,"0","1601700849883","sortbyHeights.py"
+"e","def test_checkForOldParents(self):
+    """"""Test cases for checking parents are old or not US12""""""
+    f = open(""Output.txt"", ""a+"")
+    fam: Dict = {'F23':
+               {'fam': 'F23', 'MARR': '14 FEB 1980', 'HUSB': 'I01', 'WIFE': 'I07', 'CHIL': ['I19', 'I26', 'I30']},
+           'F16': {'fam': 'F16', 'MARR': '12 DEC 2007'}}
+    fam2: Dict = {'F23': {'fam': 'F23', 'MARR': '14 FEB 1980', 'HUSB': 'I01', 'WIFE': 'I07', 'CHIL': ['I19']}}
+
+    ind1: Dict = {'I01': {'id': 'I01', 'name': 'Joe /Smith/', 'BIRT': '15 JUL 1900', 'sex': 'M', 'family': 'F23',
+                    'DEAT': '31 DEC 2013'},
+            'I07': {'id': 'I07', 'name': 'Jennifer /Smith/', 'BIRT': '23 SEP 1902', 'sex': 'F', 'family': 'F23',
+                    'DEAT': '31 DEC 2013'},
+            'I19': {'id': 'I19', 'name': 'Dick /Smith/', 'BIRT': '13 FEB 1999', 'sex': 'M', 'family': 'F23',
+                    'DEAT': '31 DEC 2013'}}
+
+    ind2: Dict = {'I01': {'id': 'I01', 'name': 'Joe /Smith/', 'BIRT': '15 JUL 1960', 'sex': 'M', 'family': 'F23',
+                     'DEAT': '31 DEC 2013'},
+             'I07': {'id': 'I07', 'name': 'Jennifer /Smith/', 'BIRT': '23 SEP 1960', 'sex': 'F', 'family': 'F23'},
+             'I19': {'id': 'I19', 'name': 'Dick /Smith/', 'BIRT': '13 FEB 1981', 'sex': 'M', 'family': 'F23'},
+             'I26': {'id': 'I26', 'name': 'Jane /Smith/', 'BIRT': '13 FEB 1981', 'sex': 'F', 'family': 'F23'},
+             'I30': {'id': 'I30', 'name': 'Mary /Test/', 'BIRT': '13 FEB 1981', 'sex': 'F', 'family': 'F23'},
+             'I32': {'id': 'I32', 'name': 'Nick /Tary/', 'BIRT': '13 FEB 1981', 'sex': 'M', 'family': 'F23'},
+             'I44': {'id': 'I44', 'name': 'Cersi /Lanister/', 'BIRT': '13 FEB 1981', 'sex': 'F', 'family': 'F23'}}
+
+    self.assertTrue(us.checkForOldParents(fam, ind2, f))
+    self.assertFalse(us.checkForOldParents(fam2, ind1, f))","","0","1601700849915","sortbyHeights.py"
+"e","      ","","169","1601700849993","sortbyHeights.py"
+"e","      ","","286","1601700849997","sortbyHeights.py"
+"e","      ","","584","1601700850001","sortbyHeights.py"
+"e","      ","","626","1601700850005","sortbyHeights.py"
+"e","      ","","753","1601700850009","sortbyHeights.py"
+"e","      ","","795","1601700850012","sortbyHeights.py"
+"e","      ","","918","1601700850016","sortbyHeights.py"
+"e","     ","","1084","1601700850020","sortbyHeights.py"
+"e","     ","","1126","1601700850023","sortbyHeights.py"
+"e","     ","","1246","1601700850027","sortbyHeights.py"
+"e","     ","","1362","1601700850031","sortbyHeights.py"
+"e","     ","","1478","1601700850035","sortbyHeights.py"
+"e","     ","","1593","1601700850039","sortbyHeights.py"
+"e","     ","","1708","1601700850042","sortbyHeights.py"
+"a","EditorChange",,,"1601700852121","sortbyHeights.py"
+"a","Enter",,,"1601700868187","sortbyHeights.py"
+"e","
+    ","","1931","1601700868275","sortbyHeights.py"
+"a","Enter",,,"1601700868372","sortbyHeights.py"
+"e","
+    ","","1936","1601700868379","sortbyHeights.py"
+"a","Enter",,,"1601700868746","sortbyHeights.py"
+"e","
+    ","","1941","1601700868750","sortbyHeights.py"
+"a","Backspace",,,"1601700869090","sortbyHeights.py"
+"e",""," ","1945","1601700869097","sortbyHeights.py"
+"e","","   ","1942","1601700869103","sortbyHeights.py"
+"a","Backspace",,,"1601700869260","sortbyHeights.py"
+"e","","
+","1941","1601700869265","sortbyHeights.py"
+"a","Backspace",,,"1601700870259","sortbyHeights.py"
+"e",""," ","1940","1601700870265","sortbyHeights.py"
+"e","","   ","1937","1601700870271","sortbyHeights.py"
+"a","Enter",,,"1601700870591","sortbyHeights.py"
+"e","
+","","1937","1601700870601","sortbyHeights.py"
+"a","Enter",,,"1601700870770","sortbyHeights.py"
+"e","
+","","1938","1601700870774","sortbyHeights.py"
+"a","Paste",,,"1601700871787","sortbyHeights.py"
+"p","def checkBigamy(family: Dict):
+    """"""Method that checks bigamy in the given gedcom data if yes then it pops and update data with no bigamy""""""
+    for f in family:
+        if 'HUSB' in family[f]:
+            hus_id = family[f]['HUSB']
+            if 'WIFE' in family[f]:
+                wife_id = family[f]['WIFE']
+
+        wife_count = 0
+        husb_count = 0
+
+        for f in family:
+            if 'HUSB' in family[f]:
+                hus_id2: List = family[f]['HUSB']
+                if hus_id == hus_id2:
+                    husb_count += 1
+                if 'WIFE' in family[f]:
+                    wife_id2: List = family[f]['WIFE']
+                    if wife_id == wife_id2:
+                        wife_count += 1
+            else:
+                continue
+
+
+def getAge(born):
+    """"""returns age of individual""""""
+    born = datetime.strptime(born, '%d %b %Y')
+    today = datetime.today()
+    return today.year - born.year - ((today.month, today.day) < (born.month, born.day))
+
+
+def checkForOldParents(fam: Dict, ind: Dict, file: TextIO):
+    """"""check the age of individuals and return boolean value if there are old parents in given data false otherwise""""""
+    result: bool = True
+    for f in fam:
+        if ""CHIL"" in fam[f]:
+            wife: str = ""0""
+            husb: str = ""0""
+            if ""HUSB"" in fam[f]:
+                husb: str = fam[f][""HUSB""]
+            if ""WIFE"" in fam[f]:
+                wife:str = fam[f][""WIFE""]
+            wifeAge: int = 0
+            husbAge: int = 0
+            if wife in ind and ""BIRT"" in ind[wife]:
+                wifeAge: Union[int, bool] = getAge(ind[wife][""BIRT""])
+            if husb in ind and ""BIRT"" in ind[husb]:
+                husbAge: Union[int, bool] = getAge(ind[husb][""BIRT""])
+            for c in fam[f][""CHIL""]:
+                childAge: int = 0
+                if ""BIRT"" in ind[c]:
+                    childAge: Union[int, bool] = getAge(ind[c][""BIRT""])
+                if wifeAge - childAge > 60:  # throw wife error
+                    file.write(
+                        ""ERROR US12: Mother "" + wife + "" is older than their child, "" + c + "" by over 60 years\n"")
+                    result: bool = False
+                if husbAge - childAge > 80:  # throw husb error
+                    file.write(
+                        ""ERROR US12: Father "" + husb + "" is older than their child, "" + c + "" by over 80 years\n"")
+                    result: bool = False
+    return result
+",,"1939","1601700871789","sortbyHeights.py"
+"e","def checkBigamy(family: Dict):
+    """"""Method that checks bigamy in the given gedcom data if yes then it pops and update data with no bigamy""""""
+    for f in family:
+        if 'HUSB' in family[f]:
+            hus_id = family[f]['HUSB']
+            if 'WIFE' in family[f]:
+                wife_id = family[f]['WIFE']
+
+        wife_count = 0
+        husb_count = 0
+
+        for f in family:
+            if 'HUSB' in family[f]:
+                hus_id2: List = family[f]['HUSB']
+                if hus_id == hus_id2:
+                    husb_count += 1
+                if 'WIFE' in family[f]:
+                    wife_id2: List = family[f]['WIFE']
+                    if wife_id == wife_id2:
+                        wife_count += 1
+            else:
+                continue
+
+
+def getAge(born):
+    """"""returns age of individual""""""
+    born = datetime.strptime(born, '%d %b %Y')
+    today = datetime.today()
+    return today.year - born.year - ((today.month, today.day) < (born.month, born.day))
+
+
+def checkForOldParents(fam: Dict, ind: Dict, file: TextIO):
+    """"""check the age of individuals and return boolean value if there are old parents in given data false otherwise""""""
+    result: bool = True
+    for f in fam:
+        if ""CHIL"" in fam[f]:
+            wife: str = ""0""
+            husb: str = ""0""
+            if ""HUSB"" in fam[f]:
+                husb: str = fam[f][""HUSB""]
+            if ""WIFE"" in fam[f]:
+                wife:str = fam[f][""WIFE""]
+            wifeAge: int = 0
+            husbAge: int = 0
+            if wife in ind and ""BIRT"" in ind[wife]:
+                wifeAge: Union[int, bool] = getAge(ind[wife][""BIRT""])
+            if husb in ind and ""BIRT"" in ind[husb]:
+                husbAge: Union[int, bool] = getAge(ind[husb][""BIRT""])
+            for c in fam[f][""CHIL""]:
+                childAge: int = 0
+                if ""BIRT"" in ind[c]:
+                    childAge: Union[int, bool] = getAge(ind[c][""BIRT""])
+                if wifeAge - childAge > 60:  # throw wife error
+                    file.write(
+                        ""ERROR US12: Mother "" + wife + "" is older than their child, "" + c + "" by over 60 years\n"")
+                    result: bool = False
+                if husbAge - childAge > 80:  # throw husb error
+                    file.write(
+                        ""ERROR US12: Father "" + husb + "" is older than their child, "" + c + "" by over 80 years\n"")
+                    result: bool = False
+    return result
+","","1939","1601700871804","sortbyHeights.py"
+"a","EditorChange",,,"1601700874674","sortbyHeights.py"
+"a","EditorChange",,,"1601700877114","sortbyHeights.py"
+"a","Enter",,,"1601700897578","sortbyHeights.py"
+"e","    
+","","1937","1601700897590","sortbyHeights.py"
+"a","Backspace",,,"1601700898209","sortbyHeights.py"
+"e",""," ","1935","1601700898216","sortbyHeights.py"
+"e","","   ","1932","1601700898221","sortbyHeights.py"
+"a","Enter",,,"1601700898561","sortbyHeights.py"
+"e","
+","","1933","1601700898566","sortbyHeights.py"
+"a","Paste",,,"1601700899964","sortbyHeights.py"
+"p","def test_checkBigamy(self):
+        """"""Test cases for bigamy""""""
+
+        # No Bigamy
+        fam: Dict = {'F23':
+                   {'fam': 'F23', 'MARR': '14 FEB 1980', 'HUSB': 'I01', 'WIFE': 'I07', 'CHIL': ['I19', 'I26', 'I30']},
+               'F16': {'fam': 'F16', 'MARR': '12 DEC 2007'}}
+
+        indi: Dict = {'I01': {'id': 'I01', 'name': 'Joe /Smith/', 'BIRT': '15 JUL 1960', 'sex': 'M', 'family': 'F23',
+                        'DEAT': '31 DEC 2013'},
+                'I07': {'id': 'I07', 'name': 'Jennifer /Smith/', 'BIRT': '23 SEP 1960', 'sex': 'F', 'family': 'F23'},
+                'I19': {'id': 'I19', 'name': 'Dick /Smith/', 'BIRT': '13 FEB 1981', 'sex': 'M', 'family': 'F23'},
+                'I26': {'id': 'I26', 'name': 'Jane /Smith/', 'BIRT': '13 FEB 1981', 'sex': 'F', 'family': 'F23'},
+                'I30': {'id': 'I30', 'name': 'Mary /Test/', 'BIRT': '13 FEB 1981', 'sex': 'F', 'family': 'F23'},
+                'I32': {'id': 'I32', 'name': 'Nick /Tary/', 'BIRT': '13 FEB 1981', 'sex': 'M', 'family': 'F23'},
+                'I44': {'id': 'I44', 'name': 'Cersi /Lanister/', 'BIRT': '13 FEB 1981', 'sex': 'F', 'family': 'F23'}}
+
+        # bigamy (same husband)
+        fam2: Dict = {'F23':
+                    {'fam': 'F23', 'MARR': '14 FEB 1980', 'HUSB': 'I01', 'WIFE': 'I07', 'CHIL': ['I19', 'I26', 'I30']},
+                'F16': {'fam': 'F16', 'MARR': '12 DEC 2007', 'HUSB': 'I01'}}
+
+        indi2: Dict = {'I01': {'id': 'I01', 'name': 'Joe /Smith/', 'BIRT': '15 JUL 1960', 'sex': 'M', 'family': 'F23',
+                         'DEAT': '31 DEC 2013'},
+                 'I07': {'id': 'I07', 'name': 'Jennifer /Smith/', 'BIRT': '23 SEP 1960', 'sex': 'F', 'family': 'F23'},
+                 'I19': {'id': 'I19', 'name': 'Dick /Smith/', 'BIRT': '13 FEB 1981', 'sex': 'M', 'family': 'F23'},
+                 'I26': {'id': 'I26', 'name': 'Jane /Smith/', 'BIRT': '13 FEB 1981', 'sex': 'F', 'family': 'F23'},
+                 'I30': {'id': 'I30', 'name': 'Mary /Test/', 'BIRT': '13 FEB 1981', 'sex': 'F', 'family': 'F23'},
+                 'I32': {'id': 'I32', 'name': 'Nick /Tary/', 'BIRT': '13 FEB 1981', 'sex': 'M', 'family': 'F23'},
+                 'I44': {'id': 'I44', 'name': 'Cersi /Lanister/', 'BIRT': '13 FEB 1981', 'sex': 'F', 'family': 'F23'}}
+
+        # bigamy (same wife)
+        fam3: Dict = {'F23':
+                    {'fam': 'F23', 'MARR': '14 FEB 1980', 'HUSB': 'I01', 'WIFE': 'I07', 'CHIL': ['I19', 'I26', 'I30']},
+                'F16': {'fam': 'F16', 'MARR': '12 DEC 2007', 'WIFE': 'I07'}}
+
+        indi3: Dict = {'I01': {'id': 'I01', 'name': 'Joe /Smith/', 'BIRT': '15 JUL 1960', 'sex': 'M', 'family': 'F23',
+                         'DEAT': '31 DEC 2013'},
+                 'I07': {'id': 'I07', 'name': 'Jennifer /Smith/', 'BIRT': '23 SEP 1960', 'sex': 'F', 'family': 'F23'},
+                 'I19': {'id': 'I19', 'name': 'Dick /Smith/', 'BIRT': '13 FEB 1981', 'sex': 'M', 'family': 'F23'},
+                 'I26': {'id': 'I26', 'name': 'Jane /Smith/', 'BIRT': '13 FEB 1981', 'sex': 'F', 'family': 'F23'},
+                 'I30': {'id': 'I30', 'name': 'Mary /Test/', 'BIRT': '13 FEB 1981', 'sex': 'F', 'family': 'F23'},
+                 'I32': {'id': 'I32', 'name': 'Nick /Tary/', 'BIRT': '13 FEB 1981', 'sex': 'M', 'family': 'F23'},
+                 'I44': {'id': 'I44', 'name': 'Cersi /Lanister/', 'BIRT': '13 FEB 1981', 'sex': 'F', 'family': 'F23'}}
+
+        us.checkBigamy(fam)
+        self.assertTrue(('I01' in indi))
+        self.assertTrue(('I01' == fam['F23']['HUSB']))
+        us.checkBigamy(fam2)
+        self.assertTrue(('I01' in indi2))
+        self.assertTrue(('I01' in fam2['F23']['HUSB']))
+        us.checkBigamy(fam3)
+        self.assertTrue(('I07' in indi3))
+        self.assertTrue(('WIFE' in fam3['F23']))",,"1933","1601700899966","sortbyHeights.py"
+"e","    def test_checkBigamy(self):
+        """"""Test cases for bigamy""""""
+
+        # No Bigamy
+        fam: Dict = {'F23':
+                   {'fam': 'F23', 'MARR': '14 FEB 1980', 'HUSB': 'I01', 'WIFE': 'I07', 'CHIL': ['I19', 'I26', 'I30']},
+               'F16': {'fam': 'F16', 'MARR': '12 DEC 2007'}}
+
+        indi: Dict = {'I01': {'id': 'I01', 'name': 'Joe /Smith/', 'BIRT': '15 JUL 1960', 'sex': 'M', 'family': 'F23',
+                        'DEAT': '31 DEC 2013'},
+                'I07': {'id': 'I07', 'name': 'Jennifer /Smith/', 'BIRT': '23 SEP 1960', 'sex': 'F', 'family': 'F23'},
+                'I19': {'id': 'I19', 'name': 'Dick /Smith/', 'BIRT': '13 FEB 1981', 'sex': 'M', 'family': 'F23'},
+                'I26': {'id': 'I26', 'name': 'Jane /Smith/', 'BIRT': '13 FEB 1981', 'sex': 'F', 'family': 'F23'},
+                'I30': {'id': 'I30', 'name': 'Mary /Test/', 'BIRT': '13 FEB 1981', 'sex': 'F', 'family': 'F23'},
+                'I32': {'id': 'I32', 'name': 'Nick /Tary/', 'BIRT': '13 FEB 1981', 'sex': 'M', 'family': 'F23'},
+                'I44': {'id': 'I44', 'name': 'Cersi /Lanister/', 'BIRT': '13 FEB 1981', 'sex': 'F', 'family': 'F23'}}
+
+        # bigamy (same husband)
+        fam2: Dict = {'F23':
+                    {'fam': 'F23', 'MARR': '14 FEB 1980', 'HUSB': 'I01', 'WIFE': 'I07', 'CHIL': ['I19', 'I26', 'I30']},
+                'F16': {'fam': 'F16', 'MARR': '12 DEC 2007', 'HUSB': 'I01'}}
+
+        indi2: Dict = {'I01': {'id': 'I01', 'name': 'Joe /Smith/', 'BIRT': '15 JUL 1960', 'sex': 'M', 'family': 'F23',
+                         'DEAT': '31 DEC 2013'},
+                 'I07': {'id': 'I07', 'name': 'Jennifer /Smith/', 'BIRT': '23 SEP 1960', 'sex': 'F', 'family': 'F23'},
+                 'I19': {'id': 'I19', 'name': 'Dick /Smith/', 'BIRT': '13 FEB 1981', 'sex': 'M', 'family': 'F23'},
+                 'I26': {'id': 'I26', 'name': 'Jane /Smith/', 'BIRT': '13 FEB 1981', 'sex': 'F', 'family': 'F23'},
+                 'I30': {'id': 'I30', 'name': 'Mary /Test/', 'BIRT': '13 FEB 1981', 'sex': 'F', 'family': 'F23'},
+                 'I32': {'id': 'I32', 'name': 'Nick /Tary/', 'BIRT': '13 FEB 1981', 'sex': 'M', 'family': 'F23'},
+                 'I44': {'id': 'I44', 'name': 'Cersi /Lanister/', 'BIRT': '13 FEB 1981', 'sex': 'F', 'family': 'F23'}}
+
+        # bigamy (same wife)
+        fam3: Dict = {'F23':
+                    {'fam': 'F23', 'MARR': '14 FEB 1980', 'HUSB': 'I01', 'WIFE': 'I07', 'CHIL': ['I19', 'I26', 'I30']},
+                'F16': {'fam': 'F16', 'MARR': '12 DEC 2007', 'WIFE': 'I07'}}
+
+        indi3: Dict = {'I01': {'id': 'I01', 'name': 'Joe /Smith/', 'BIRT': '15 JUL 1960', 'sex': 'M', 'family': 'F23',
+                         'DEAT': '31 DEC 2013'},
+                 'I07': {'id': 'I07', 'name': 'Jennifer /Smith/', 'BIRT': '23 SEP 1960', 'sex': 'F', 'family': 'F23'},
+                 'I19': {'id': 'I19', 'name': 'Dick /Smith/', 'BIRT': '13 FEB 1981', 'sex': 'M', 'family': 'F23'},
+                 'I26': {'id': 'I26', 'name': 'Jane /Smith/', 'BIRT': '13 FEB 1981', 'sex': 'F', 'family': 'F23'},
+                 'I30': {'id': 'I30', 'name': 'Mary /Test/', 'BIRT': '13 FEB 1981', 'sex': 'F', 'family': 'F23'},
+                 'I32': {'id': 'I32', 'name': 'Nick /Tary/', 'BIRT': '13 FEB 1981', 'sex': 'M', 'family': 'F23'},
+                 'I44': {'id': 'I44', 'name': 'Cersi /Lanister/', 'BIRT': '13 FEB 1981', 'sex': 'F', 'family': 'F23'}}
+
+        us.checkBigamy(fam)
+        self.assertTrue(('I01' in indi))
+        self.assertTrue(('I01' == fam['F23']['HUSB']))
+        us.checkBigamy(fam2)
+        self.assertTrue(('I01' in indi2))
+        self.assertTrue(('I01' in fam2['F23']['HUSB']))
+        us.checkBigamy(fam3)
+        self.assertTrue(('I07' in indi3))
+        self.assertTrue(('WIFE' in fam3['F23']))","","1933","1601700899979","sortbyHeights.py"
+"e","      ","","2069","1601700900039","sortbyHeights.py"
+"e","      ","","2190","1601700900043","sortbyHeights.py"
+"e","      ","","2385","1601700900046","sortbyHeights.py"
+"e","      ","","2431","1601700900050","sortbyHeights.py"
+"e","      ","","2555","1601700900054","sortbyHeights.py"
+"e","      ","","2675","1601700900058","sortbyHeights.py"
+"e","      ","","2795","1601700900062","sortbyHeights.py"
+"e","      ","","2914","1601700900065","sortbyHeights.py"
+"e","      ","","3033","1601700900069","sortbyHeights.py"
+"e","      ","","3223","1601700900074","sortbyHeights.py"
+"e","      ","","3345","1601700900077","sortbyHeights.py"
+"e","      ","","3557","1601700900081","sortbyHeights.py"
+"e","      ","","3604","1601700900085","sortbyHeights.py"
+"e","      ","","3729","1601700900088","sortbyHeights.py"
+"e","      ","","3850","1601700900092","sortbyHeights.py"
+"e","      ","","3971","1601700900095","sortbyHeights.py"
+"e","      ","","4091","1601700900099","sortbyHeights.py"
+"e","      ","","4211","1601700900102","sortbyHeights.py"
+"e","      ","","4398","1601700900106","sortbyHeights.py"
+"e","      ","","4520","1601700900110","sortbyHeights.py"
+"e","      ","","4732","1601700900114","sortbyHeights.py"
+"e","      ","","4779","1601700900117","sortbyHeights.py"
+"e","      ","","4904","1601700900121","sortbyHeights.py"
+"e","      ","","5025","1601700900124","sortbyHeights.py"
+"e","      ","","5146","1601700900128","sortbyHeights.py"
+"e","      ","","5266","1601700900132","sortbyHeights.py"
+"e","      ","","5386","1601700900135","sortbyHeights.py"
+"e","
+                         ","","2142","1601700900264","sortbyHeights.py"
+"e","
+                             ","","2546","1601700900270","sortbyHeights.py"
+"e","
+                             ","","3178","1601700900276","sortbyHeights.py"
+"e","
+                          ","","3382","1601700900282","sortbyHeights.py"
+"e","
+                              ","","3806","1601700900288","sortbyHeights.py"
+"e","
+                              ","","4444","1601700900294","sortbyHeights.py"
+"e","
+                          ","","4646","1601700900300","sortbyHeights.py"
+"e","
+                              ","","5070","1601700900305","sortbyHeights.py"
+"e","
+                              ","","5708","1601700900311","sortbyHeights.py"
+"a","Move Cursor",,,"1601701155405","sortbyHeights.py"
+"a","Move Cursor",,,"1601701155504","sortbyHeights.py"
+"a","Move Cursor",,,"1601701155605","sortbyHeights.py"
+"a","Move Cursor",,,"1601701155709","sortbyHeights.py"
+"a","Move Cursor",,,"1601701155814","sortbyHeights.py"
+"a","Move Cursor",,,"1601701155913","sortbyHeights.py"
+"a","Move Cursor",,,"1601701156015","sortbyHeights.py"
+"a","Move Cursor",,,"1601701156115","sortbyHeights.py"
+"a","Move Cursor",,,"1601701156215","sortbyHeights.py"
+"a","Move Cursor",,,"1601701156315","sortbyHeights.py"
+"a","Move Cursor",,,"1601701156415","sortbyHeights.py"
+"a","Move Cursor",,,"1601701156518","sortbyHeights.py"
+"a","Move Cursor",,,"1601701156621","sortbyHeights.py"
+"a","Copy",,,"1601701158722","sortbyHeights.py"
+"c","def checkBigamy(family: Dict):
+    """"""Method that checks bigamy in the given gedcom data if yes then it pops and update data with no bigamy""""""
+    for f in family:
+        if 'HUSB' in family[f]:
+            hus_id = family[f]['HUSB']
+            if 'WIFE' in family[f]:
+                wife_id = family[f]['WIFE']
+
+        wife_count = 0
+        husb_count = 0
+
+        for f in family:
+            if 'HUSB' in family[f]:
+                hus_id2: List = family[f]['HUSB']
+                if hus_id == hus_id2:
+                    husb_count += 1
+                if 'WIFE' in family[f]:
+                    wife_id2: List = family[f]['WIFE']
+                    if wife_id == wife_id2:
+                        wife_count += 1
+            else:
+                continue
+
+
+def getAge(born):
+    """"""returns age of individual""""""
+    born = datetime.strptime(born, '%d %b %Y')
+    today = datetime.today()
+    return today.year - born.year - ((today.month, today.day) < (born.month, born.day))
+
+
+def checkForOldParents(fam: Dict, ind: Dict, file: TextIO):
+    """"""check the age of individuals and return boolean value if there are old parents in given data false otherwise""""""
+    result: bool = True
+    for f in fam:
+        if ""CHIL"" in fam[f]:
+            wife: str = ""0""
+            husb: str = ""0""
+            if ""HUSB"" in fam[f]:
+                husb: str = fam[f][""HUSB""]
+            if ""WIFE"" in fam[f]:
+                wife:str = fam[f][""WIFE""]
+            wifeAge: int = 0
+            husbAge: int = 0
+            if wife in ind and ""BIRT"" in ind[wife]:
+                wifeAge: Union[int, bool] = getAge(ind[wife][""BIRT""])
+            if husb in ind and ""BIRT"" in ind[husb]:
+                husbAge: Union[int, bool] = getAge(ind[husb][""BIRT""])
+            for c in fam[f][""CHIL""]:
+                childAge: int = 0
+                if ""BIRT"" in ind[c]:
+                    childAge: Union[int, bool] = getAge(ind[c][""BIRT""])
+                if wifeAge - childAge > 60:  # throw wife error
+                    file.write(
+                        ""ERROR US12: Mother "" + wife + "" is older than their child, "" + c + "" by over 60 years\n"")
+                    result: bool = False
+                if husbAge - childAge > 80:  # throw husb error
+                    file.write(
+                        ""ERROR US12: Father "" + husb + "" is older than their child, "" + c + "" by over 80 years\n"")
+                    result: bool = False
+    return result",,"6137","1601701158773","sortbyHeights.py"
+"a","Copy",,,"1601701158915","sortbyHeights.py"
+"c","def checkBigamy(family: Dict):
+    """"""Method that checks bigamy in the given gedcom data if yes then it pops and update data with no bigamy""""""
+    for f in family:
+        if 'HUSB' in family[f]:
+            hus_id = family[f]['HUSB']
+            if 'WIFE' in family[f]:
+                wife_id = family[f]['WIFE']
+
+        wife_count = 0
+        husb_count = 0
+
+        for f in family:
+            if 'HUSB' in family[f]:
+                hus_id2: List = family[f]['HUSB']
+                if hus_id == hus_id2:
+                    husb_count += 1
+                if 'WIFE' in family[f]:
+                    wife_id2: List = family[f]['WIFE']
+                    if wife_id == wife_id2:
+                        wife_count += 1
+            else:
+                continue
+
+
+def getAge(born):
+    """"""returns age of individual""""""
+    born = datetime.strptime(born, '%d %b %Y')
+    today = datetime.today()
+    return today.year - born.year - ((today.month, today.day) < (born.month, born.day))
+
+
+def checkForOldParents(fam: Dict, ind: Dict, file: TextIO):
+    """"""check the age of individuals and return boolean value if there are old parents in given data false otherwise""""""
+    result: bool = True
+    for f in fam:
+        if ""CHIL"" in fam[f]:
+            wife: str = ""0""
+            husb: str = ""0""
+            if ""HUSB"" in fam[f]:
+                husb: str = fam[f][""HUSB""]
+            if ""WIFE"" in fam[f]:
+                wife:str = fam[f][""WIFE""]
+            wifeAge: int = 0
+            husbAge: int = 0
+            if wife in ind and ""BIRT"" in ind[wife]:
+                wifeAge: Union[int, bool] = getAge(ind[wife][""BIRT""])
+            if husb in ind and ""BIRT"" in ind[husb]:
+                husbAge: Union[int, bool] = getAge(ind[husb][""BIRT""])
+            for c in fam[f][""CHIL""]:
+                childAge: int = 0
+                if ""BIRT"" in ind[c]:
+                    childAge: Union[int, bool] = getAge(ind[c][""BIRT""])
+                if wifeAge - childAge > 60:  # throw wife error
+                    file.write(
+                        ""ERROR US12: Mother "" + wife + "" is older than their child, "" + c + "" by over 60 years\n"")
+                    result: bool = False
+                if husbAge - childAge > 80:  # throw husb error
+                    file.write(
+                        ""ERROR US12: Father "" + husb + "" is older than their child, "" + c + "" by over 80 years\n"")
+                    result: bool = False
+    return result",,"6137","1601701158918","sortbyHeights.py"
+"a","Copy",,,"1601701159141","sortbyHeights.py"
+"c","def checkBigamy(family: Dict):
+    """"""Method that checks bigamy in the given gedcom data if yes then it pops and update data with no bigamy""""""
+    for f in family:
+        if 'HUSB' in family[f]:
+            hus_id = family[f]['HUSB']
+            if 'WIFE' in family[f]:
+                wife_id = family[f]['WIFE']
+
+        wife_count = 0
+        husb_count = 0
+
+        for f in family:
+            if 'HUSB' in family[f]:
+                hus_id2: List = family[f]['HUSB']
+                if hus_id == hus_id2:
+                    husb_count += 1
+                if 'WIFE' in family[f]:
+                    wife_id2: List = family[f]['WIFE']
+                    if wife_id == wife_id2:
+                        wife_count += 1
+            else:
+                continue
+
+
+def getAge(born):
+    """"""returns age of individual""""""
+    born = datetime.strptime(born, '%d %b %Y')
+    today = datetime.today()
+    return today.year - born.year - ((today.month, today.day) < (born.month, born.day))
+
+
+def checkForOldParents(fam: Dict, ind: Dict, file: TextIO):
+    """"""check the age of individuals and return boolean value if there are old parents in given data false otherwise""""""
+    result: bool = True
+    for f in fam:
+        if ""CHIL"" in fam[f]:
+            wife: str = ""0""
+            husb: str = ""0""
+            if ""HUSB"" in fam[f]:
+                husb: str = fam[f][""HUSB""]
+            if ""WIFE"" in fam[f]:
+                wife:str = fam[f][""WIFE""]
+            wifeAge: int = 0
+            husbAge: int = 0
+            if wife in ind and ""BIRT"" in ind[wife]:
+                wifeAge: Union[int, bool] = getAge(ind[wife][""BIRT""])
+            if husb in ind and ""BIRT"" in ind[husb]:
+                husbAge: Union[int, bool] = getAge(ind[husb][""BIRT""])
+            for c in fam[f][""CHIL""]:
+                childAge: int = 0
+                if ""BIRT"" in ind[c]:
+                    childAge: Union[int, bool] = getAge(ind[c][""BIRT""])
+                if wifeAge - childAge > 60:  # throw wife error
+                    file.write(
+                        ""ERROR US12: Mother "" + wife + "" is older than their child, "" + c + "" by over 60 years\n"")
+                    result: bool = False
+                if husbAge - childAge > 80:  # throw husb error
+                    file.write(
+                        ""ERROR US12: Father "" + husb + "" is older than their child, "" + c + "" by over 80 years\n"")
+                    result: bool = False
+    return result",,"6137","1601701159143","sortbyHeights.py"
+"a","EditorChange",,,"1601701160636","sortbyHeights.py"
+"a","Move Cursor",,,"1601701175742","sortbyHeights.py"
+"a","Move Cursor",,,"1601701175842","sortbyHeights.py"
+"a","Move Cursor",,,"1601701175943","sortbyHeights.py"
+"a","Move Cursor",,,"1601701176047","sortbyHeights.py"
+"a","Move Cursor",,,"1601701176150","sortbyHeights.py"
+"a","Move Cursor",,,"1601701176251","sortbyHeights.py"
+"a","Move Cursor",,,"1601701176354","sortbyHeights.py"
+"a","Move Cursor",,,"1601701176454","sortbyHeights.py"
+"a","Move Cursor",,,"1601701176555","sortbyHeights.py"
+"a","Move Cursor",,,"1601701176657","sortbyHeights.py"
+"a","Move Cursor",,,"1601701176759","sortbyHeights.py"
+"a","Move Cursor",,,"1601701176868","sortbyHeights.py"
+"a","Move Cursor",,,"1601701176966","sortbyHeights.py"
+"a","Move Cursor",,,"1601701177067","sortbyHeights.py"
+"a","Move Cursor",,,"1601701177638","sortbyHeights.py"
+"a","Move Cursor",,,"1601701177739","sortbyHeights.py"
+"a","Move Cursor",,,"1601701177843","sortbyHeights.py"
+"a","Move Cursor",,,"1601701177953","sortbyHeights.py"
+"a","Move Cursor",,,"1601701178050","sortbyHeights.py"
+"a","Move Cursor",,,"1601701178150","sortbyHeights.py"
+"a","Move Cursor",,,"1601701178256","sortbyHeights.py"
+"a","Move Cursor",,,"1601701178354","sortbyHeights.py"
+"a","Move Cursor",,,"1601701178458","sortbyHeights.py"
+"a","Move Cursor",,,"1601701178558","sortbyHeights.py"
+"a","Move Cursor",,,"1601701178661","sortbyHeights.py"
+"a","Move Cursor",,,"1601701178765","sortbyHeights.py"
+"a","Move Cursor",,,"1601701178869","sortbyHeights.py"
+"a","Move Cursor",,,"1601701178972","sortbyHeights.py"
+"a","Move Cursor",,,"1601701179072","sortbyHeights.py"
+"a","Move Cursor",,,"1601701179174","sortbyHeights.py"
+"a","Move Cursor",,,"1601701179275","sortbyHeights.py"
+"a","Move Cursor",,,"1601701180206","sortbyHeights.py"
+"a","Move Cursor",,,"1601701180310","sortbyHeights.py"
+"a","Move Cursor",,,"1601701180413","sortbyHeights.py"
+"a","Move Cursor",,,"1601701180513","sortbyHeights.py"
+"a","Move Cursor",,,"1601701180617","sortbyHeights.py"
+"a","Move Cursor",,,"1601701180718","sortbyHeights.py"
+"a","Move Cursor",,,"1601701180822","sortbyHeights.py"
+"a","Move Cursor",,,"1601701180926","sortbyHeights.py"
+"a","Move Cursor",,,"1601701181030","sortbyHeights.py"
+"a","Move Cursor",,,"1601701181134","sortbyHeights.py"
+"a","Move Cursor",,,"1601701181233","sortbyHeights.py"
+"a","Move Cursor",,,"1601701181334","sortbyHeights.py"
+"a","Move Cursor",,,"1601701185998","sortbyHeights.py"
+"a","Move Cursor",,,"1601701186098","sortbyHeights.py"
+"a","Move Cursor",,,"1601701186198","sortbyHeights.py"
+"a","Move Cursor",,,"1601701186300","sortbyHeights.py"
+"a","Move Cursor",,,"1601701186405","sortbyHeights.py"
+"a","Move Cursor",,,"1601701186532","sortbyHeights.py"
+"a","Move Cursor",,,"1601701186632","sortbyHeights.py"
+"a","Move Cursor",,,"1601701186741","sortbyHeights.py"
+"a","Move Cursor",,,"1601701186835","sortbyHeights.py"
+"a","Move Cursor",,,"1601701187534","sortbyHeights.py"
+"a","Move Cursor",,,"1601701187636","sortbyHeights.py"
+"a","Move Cursor",,,"1601701187739","sortbyHeights.py"
+"a","Move Cursor",,,"1601701187841","sortbyHeights.py"
+"a","Move Cursor",,,"1601701187945","sortbyHeights.py"
+"a","Move Cursor",,,"1601701188049","sortbyHeights.py"
+"a","Move Cursor",,,"1601701188146","sortbyHeights.py"
+"a","Move Cursor",,,"1601701188246","sortbyHeights.py"
+"a","Copy",,,"1601701191723","sortbyHeights.py"
+"c","def test_checkForOldParents(self):
+    """"""Test cases for checking parents are old or not US12""""""
+    f = open(""Output.txt"", ""a+"")
+    fam: Dict = {'F23':
+                     {'fam': 'F23', 'MARR': '14 FEB 1980', 'HUSB': 'I01', 'WIFE': 'I07', 'CHIL': ['I19', 'I26', 'I30']},
+                 'F16': {'fam': 'F16', 'MARR': '12 DEC 2007'}}
+    fam2: Dict = {'F23': {'fam': 'F23', 'MARR': '14 FEB 1980', 'HUSB': 'I01', 'WIFE': 'I07', 'CHIL': ['I19']}}
+
+    ind1: Dict = {'I01': {'id': 'I01', 'name': 'Joe /Smith/', 'BIRT': '15 JUL 1900', 'sex': 'M', 'family': 'F23',
+                          'DEAT': '31 DEC 2013'},
+                  'I07': {'id': 'I07', 'name': 'Jennifer /Smith/', 'BIRT': '23 SEP 1902', 'sex': 'F', 'family': 'F23',
+                          'DEAT': '31 DEC 2013'},
+                  'I19': {'id': 'I19', 'name': 'Dick /Smith/', 'BIRT': '13 FEB 1999', 'sex': 'M', 'family': 'F23',
+                          'DEAT': '31 DEC 2013'}}
+
+    ind2: Dict = {'I01': {'id': 'I01', 'name': 'Joe /Smith/', 'BIRT': '15 JUL 1960', 'sex': 'M', 'family': 'F23',
+                          'DEAT': '31 DEC 2013'},
+                  'I07': {'id': 'I07', 'name': 'Jennifer /Smith/', 'BIRT': '23 SEP 1960', 'sex': 'F', 'family': 'F23'},
+                  'I19': {'id': 'I19', 'name': 'Dick /Smith/', 'BIRT': '13 FEB 1981', 'sex': 'M', 'family': 'F23'},
+                  'I26': {'id': 'I26', 'name': 'Jane /Smith/', 'BIRT': '13 FEB 1981', 'sex': 'F', 'family': 'F23'},
+                  'I30': {'id': 'I30', 'name': 'Mary /Test/', 'BIRT': '13 FEB 1981', 'sex': 'F', 'family': 'F23'},
+                  'I32': {'id': 'I32', 'name': 'Nick /Tary/', 'BIRT': '13 FEB 1981', 'sex': 'M', 'family': 'F23'},
+                  'I44': {'id': 'I44', 'name': 'Cersi /Lanister/', 'BIRT': '13 FEB 1981', 'sex': 'F', 'family': 'F23'}}
+
+    self.assertTrue(us.checkForOldParents(fam, ind2, f))
+    self.assertFalse(us.checkForOldParents(fam2, ind1, f))
+
+    def test_checkBigamy(self):
+        """"""Test cases for bigamy""""""
+
+        # No Bigamy
+        fam: Dict = {'F23':
+                         {'fam': 'F23', 'MARR': '14 FEB 1980', 'HUSB': 'I01', 'WIFE': 'I07',
+                          'CHIL': ['I19', 'I26', 'I30']},
+                     'F16': {'fam': 'F16', 'MARR': '12 DEC 2007'}}
+
+        indi: Dict = {'I01': {'id': 'I01', 'name': 'Joe /Smith/', 'BIRT': '15 JUL 1960', 'sex': 'M', 'family': 'F23',
+                              'DEAT': '31 DEC 2013'},
+                      'I07': {'id': 'I07', 'name': 'Jennifer /Smith/', 'BIRT': '23 SEP 1960', 'sex': 'F',
+                              'family': 'F23'},
+                      'I19': {'id': 'I19', 'name': 'Dick /Smith/', 'BIRT': '13 FEB 1981', 'sex': 'M', 'family': 'F23'},
+                      'I26': {'id': 'I26', 'name': 'Jane /Smith/', 'BIRT': '13 FEB 1981', 'sex': 'F', 'family': 'F23'},
+                      'I30': {'id': 'I30', 'name': 'Mary /Test/', 'BIRT': '13 FEB 1981', 'sex': 'F', 'family': 'F23'},
+                      'I32': {'id': 'I32', 'name': 'Nick /Tary/', 'BIRT': '13 FEB 1981', 'sex': 'M', 'family': 'F23'},
+                      'I44': {'id': 'I44', 'name': 'Cersi /Lanister/', 'BIRT': '13 FEB 1981', 'sex': 'F',
+                              'family': 'F23'}}
+
+        # bigamy (same husband)
+        fam2: Dict = {'F23':
+                          {'fam': 'F23', 'MARR': '14 FEB 1980', 'HUSB': 'I01', 'WIFE': 'I07',
+                           'CHIL': ['I19', 'I26', 'I30']},
+                      'F16': {'fam': 'F16', 'MARR': '12 DEC 2007', 'HUSB': 'I01'}}
+
+        indi2: Dict = {'I01': {'id': 'I01', 'name': 'Joe /Smith/', 'BIRT': '15 JUL 1960', 'sex': 'M', 'family': 'F23',
+                               'DEAT': '31 DEC 2013'},
+                       'I07': {'id': 'I07', 'name': 'Jennifer /Smith/', 'BIRT': '23 SEP 1960', 'sex': 'F',
+                               'family': 'F23'},
+                       'I19': {'id': 'I19', 'name': 'Dick /Smith/', 'BIRT': '13 FEB 1981', 'sex': 'M', 'family': 'F23'},
+                       'I26': {'id': 'I26', 'name': 'Jane /Smith/', 'BIRT': '13 FEB 1981', 'sex': 'F', 'family': 'F23'},
+                       'I30': {'id': 'I30', 'name': 'Mary /Test/', 'BIRT': '13 FEB 1981', 'sex': 'F', 'family': 'F23'},
+                       'I32': {'id': 'I32', 'name': 'Nick /Tary/', 'BIRT': '13 FEB 1981', 'sex': 'M', 'family': 'F23'},
+                       'I44': {'id': 'I44', 'name': 'Cersi /Lanister/', 'BIRT': '13 FEB 1981', 'sex': 'F',
+                               'family': 'F23'}}
+
+        # bigamy (same wife)
+        fam3: Dict = {'F23':
+                          {'fam': 'F23', 'MARR': '14 FEB 1980', 'HUSB': 'I01', 'WIFE': 'I07',
+                           'CHIL': ['I19', 'I26', 'I30']},
+                      'F16': {'fam': 'F16', 'MARR': '12 DEC 2007', 'WIFE': 'I07'}}
+
+        indi3: Dict = {'I01': {'id': 'I01', 'name': 'Joe /Smith/', 'BIRT': '15 JUL 1960', 'sex': 'M', 'family': 'F23',
+                               'DEAT': '31 DEC 2013'},
+                       'I07': {'id': 'I07', 'name': 'Jennifer /Smith/', 'BIRT': '23 SEP 1960', 'sex': 'F',
+                               'family': 'F23'},
+                       'I19': {'id': 'I19', 'name': 'Dick /Smith/', 'BIRT': '13 FEB 1981', 'sex': 'M', 'family': 'F23'},
+                       'I26': {'id': 'I26', 'name': 'Jane /Smith/', 'BIRT': '13 FEB 1981', 'sex': 'F', 'family': 'F23'},
+                       'I30': {'id': 'I30', 'name': 'Mary /Test/', 'BIRT': '13 FEB 1981', 'sex': 'F', 'family': 'F23'},
+                       'I32': {'id': 'I32', 'name': 'Nick /Tary/', 'BIRT': '13 FEB 1981', 'sex': 'M', 'family': 'F23'},
+                       'I44': {'id': 'I44', 'name': 'Cersi /Lanister/', 'BIRT': '13 FEB 1981', 'sex': 'F',
+                               'family': 'F23'}}
+
+        us.checkBigamy(fam)
+        self.assertTrue(('I01' in indi))
+        self.assertTrue(('I01' == fam['F23']['HUSB']))
+        us.checkBigamy(fam2)
+        self.assertTrue(('I01' in indi2))
+        self.assertTrue(('I01' in fam2['F23']['HUSB']))
+        us.checkBigamy(fam3)
+        self.assertTrue(('I07' in indi3))
+        self.assertTrue(('WIFE' in fam3['F23']))",,"0","1601701191734","sortbyHeights.py"
+"a","Copy",,,"1601701191922","sortbyHeights.py"
+"c","def test_checkForOldParents(self):
+    """"""Test cases for checking parents are old or not US12""""""
+    f = open(""Output.txt"", ""a+"")
+    fam: Dict = {'F23':
+                     {'fam': 'F23', 'MARR': '14 FEB 1980', 'HUSB': 'I01', 'WIFE': 'I07', 'CHIL': ['I19', 'I26', 'I30']},
+                 'F16': {'fam': 'F16', 'MARR': '12 DEC 2007'}}
+    fam2: Dict = {'F23': {'fam': 'F23', 'MARR': '14 FEB 1980', 'HUSB': 'I01', 'WIFE': 'I07', 'CHIL': ['I19']}}
+
+    ind1: Dict = {'I01': {'id': 'I01', 'name': 'Joe /Smith/', 'BIRT': '15 JUL 1900', 'sex': 'M', 'family': 'F23',
+                          'DEAT': '31 DEC 2013'},
+                  'I07': {'id': 'I07', 'name': 'Jennifer /Smith/', 'BIRT': '23 SEP 1902', 'sex': 'F', 'family': 'F23',
+                          'DEAT': '31 DEC 2013'},
+                  'I19': {'id': 'I19', 'name': 'Dick /Smith/', 'BIRT': '13 FEB 1999', 'sex': 'M', 'family': 'F23',
+                          'DEAT': '31 DEC 2013'}}
+
+    ind2: Dict = {'I01': {'id': 'I01', 'name': 'Joe /Smith/', 'BIRT': '15 JUL 1960', 'sex': 'M', 'family': 'F23',
+                          'DEAT': '31 DEC 2013'},
+                  'I07': {'id': 'I07', 'name': 'Jennifer /Smith/', 'BIRT': '23 SEP 1960', 'sex': 'F', 'family': 'F23'},
+                  'I19': {'id': 'I19', 'name': 'Dick /Smith/', 'BIRT': '13 FEB 1981', 'sex': 'M', 'family': 'F23'},
+                  'I26': {'id': 'I26', 'name': 'Jane /Smith/', 'BIRT': '13 FEB 1981', 'sex': 'F', 'family': 'F23'},
+                  'I30': {'id': 'I30', 'name': 'Mary /Test/', 'BIRT': '13 FEB 1981', 'sex': 'F', 'family': 'F23'},
+                  'I32': {'id': 'I32', 'name': 'Nick /Tary/', 'BIRT': '13 FEB 1981', 'sex': 'M', 'family': 'F23'},
+                  'I44': {'id': 'I44', 'name': 'Cersi /Lanister/', 'BIRT': '13 FEB 1981', 'sex': 'F', 'family': 'F23'}}
+
+    self.assertTrue(us.checkForOldParents(fam, ind2, f))
+    self.assertFalse(us.checkForOldParents(fam2, ind1, f))
+
+    def test_checkBigamy(self):
+        """"""Test cases for bigamy""""""
+
+        # No Bigamy
+        fam: Dict = {'F23':
+                         {'fam': 'F23', 'MARR': '14 FEB 1980', 'HUSB': 'I01', 'WIFE': 'I07',
+                          'CHIL': ['I19', 'I26', 'I30']},
+                     'F16': {'fam': 'F16', 'MARR': '12 DEC 2007'}}
+
+        indi: Dict = {'I01': {'id': 'I01', 'name': 'Joe /Smith/', 'BIRT': '15 JUL 1960', 'sex': 'M', 'family': 'F23',
+                              'DEAT': '31 DEC 2013'},
+                      'I07': {'id': 'I07', 'name': 'Jennifer /Smith/', 'BIRT': '23 SEP 1960', 'sex': 'F',
+                              'family': 'F23'},
+                      'I19': {'id': 'I19', 'name': 'Dick /Smith/', 'BIRT': '13 FEB 1981', 'sex': 'M', 'family': 'F23'},
+                      'I26': {'id': 'I26', 'name': 'Jane /Smith/', 'BIRT': '13 FEB 1981', 'sex': 'F', 'family': 'F23'},
+                      'I30': {'id': 'I30', 'name': 'Mary /Test/', 'BIRT': '13 FEB 1981', 'sex': 'F', 'family': 'F23'},
+                      'I32': {'id': 'I32', 'name': 'Nick /Tary/', 'BIRT': '13 FEB 1981', 'sex': 'M', 'family': 'F23'},
+                      'I44': {'id': 'I44', 'name': 'Cersi /Lanister/', 'BIRT': '13 FEB 1981', 'sex': 'F',
+                              'family': 'F23'}}
+
+        # bigamy (same husband)
+        fam2: Dict = {'F23':
+                          {'fam': 'F23', 'MARR': '14 FEB 1980', 'HUSB': 'I01', 'WIFE': 'I07',
+                           'CHIL': ['I19', 'I26', 'I30']},
+                      'F16': {'fam': 'F16', 'MARR': '12 DEC 2007', 'HUSB': 'I01'}}
+
+        indi2: Dict = {'I01': {'id': 'I01', 'name': 'Joe /Smith/', 'BIRT': '15 JUL 1960', 'sex': 'M', 'family': 'F23',
+                               'DEAT': '31 DEC 2013'},
+                       'I07': {'id': 'I07', 'name': 'Jennifer /Smith/', 'BIRT': '23 SEP 1960', 'sex': 'F',
+                               'family': 'F23'},
+                       'I19': {'id': 'I19', 'name': 'Dick /Smith/', 'BIRT': '13 FEB 1981', 'sex': 'M', 'family': 'F23'},
+                       'I26': {'id': 'I26', 'name': 'Jane /Smith/', 'BIRT': '13 FEB 1981', 'sex': 'F', 'family': 'F23'},
+                       'I30': {'id': 'I30', 'name': 'Mary /Test/', 'BIRT': '13 FEB 1981', 'sex': 'F', 'family': 'F23'},
+                       'I32': {'id': 'I32', 'name': 'Nick /Tary/', 'BIRT': '13 FEB 1981', 'sex': 'M', 'family': 'F23'},
+                       'I44': {'id': 'I44', 'name': 'Cersi /Lanister/', 'BIRT': '13 FEB 1981', 'sex': 'F',
+                               'family': 'F23'}}
+
+        # bigamy (same wife)
+        fam3: Dict = {'F23':
+                          {'fam': 'F23', 'MARR': '14 FEB 1980', 'HUSB': 'I01', 'WIFE': 'I07',
+                           'CHIL': ['I19', 'I26', 'I30']},
+                      'F16': {'fam': 'F16', 'MARR': '12 DEC 2007', 'WIFE': 'I07'}}
+
+        indi3: Dict = {'I01': {'id': 'I01', 'name': 'Joe /Smith/', 'BIRT': '15 JUL 1960', 'sex': 'M', 'family': 'F23',
+                               'DEAT': '31 DEC 2013'},
+                       'I07': {'id': 'I07', 'name': 'Jennifer /Smith/', 'BIRT': '23 SEP 1960', 'sex': 'F',
+                               'family': 'F23'},
+                       'I19': {'id': 'I19', 'name': 'Dick /Smith/', 'BIRT': '13 FEB 1981', 'sex': 'M', 'family': 'F23'},
+                       'I26': {'id': 'I26', 'name': 'Jane /Smith/', 'BIRT': '13 FEB 1981', 'sex': 'F', 'family': 'F23'},
+                       'I30': {'id': 'I30', 'name': 'Mary /Test/', 'BIRT': '13 FEB 1981', 'sex': 'F', 'family': 'F23'},
+                       'I32': {'id': 'I32', 'name': 'Nick /Tary/', 'BIRT': '13 FEB 1981', 'sex': 'M', 'family': 'F23'},
+                       'I44': {'id': 'I44', 'name': 'Cersi /Lanister/', 'BIRT': '13 FEB 1981', 'sex': 'F',
+                               'family': 'F23'}}
+
+        us.checkBigamy(fam)
+        self.assertTrue(('I01' in indi))
+        self.assertTrue(('I01' == fam['F23']['HUSB']))
+        us.checkBigamy(fam2)
+        self.assertTrue(('I01' in indi2))
+        self.assertTrue(('I01' in fam2['F23']['HUSB']))
+        us.checkBigamy(fam3)
+        self.assertTrue(('I07' in indi3))
+        self.assertTrue(('WIFE' in fam3['F23']))",,"0","1601701191927","sortbyHeights.py"
+"a","EditorChange",,,"1601701192961","sortbyHeights.py"
